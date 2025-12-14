@@ -1,0 +1,119 @@
+:root {
+    --text-color-333: #333;
+    --text-color-555: #555;
+    --text-color-666: #666;
+    --text-color-888: #888;
+    --bg-color: #fff;
+    --bg-color-222: #222;
+    --footer-bg-color: #f8f8f6;
+    --select-color: #f5f5f5;
+    --menu-top-padding: 7px;
+    --text-hover-color: #e34444;
+    --border-color: #363636;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: inherit;
+    scrollbar-width: smooth;
+}
+
+body {
+    box-sizing: border-box;
+    font-size: 62.5%;
+    line-height: 1.6rem;
+    font-family: 'Poppins', sans-serif;
+}
+
+ul {
+    list-style: none;
+}
+
+li {
+    display: inline-block;
+}
+
+a {
+    text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0.325rem 0;
+}
+
+button,
+input,
+select {
+    outline: none;
+    border: none;
+}
+
+.btn-return {
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+    border: 1px solid #eaeaea;
+    border-radius: 100%;
+    padding: 17px 20px;
+    font-size: 16px;
+    text-align: center;
+    cursor: pointer;
+    color: #555;
+    background-color: #fff;
+    opacity: 0;
+    visibility: hidden;
+    transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+.btn-return.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.btn-return:hover {
+    color: #fff;
+    background-color: var(--text-hover-color);
+}
+
+/* ---------------- Common Style Sheet --------------- */
+.container {
+    margin: 0 30px;
+}
+
+.common-flex {
+    display: flex;
+    align-items: center;
+}
+
+.padding-0-15 {
+    padding: 0 15px;
+}
+
+.flag-icon {
+    margin-right: 4px;
+}
+
+
+/* ------------------ Common Transition for Menu -------------------- */
+.transition-default {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+
+    transition:
+        opacity 0.5s ease,
+        transform 0.5s ease,
+        visibility 0.5s ease;
+}
+
+.transition-hover {
+    opacity: 1;
+    visibility: visible;
+    transform: translate(0);
+}
