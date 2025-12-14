@@ -231,6 +231,11 @@
     margin-left: 10px;
 }
 
+.menu-center__grid-group-text p {
+    color: var(--text-color-666);
+    font-size: 12px;
+}
+
 .menu-center__grid-group-link {
     text-transform: uppercase;
     font-size: 14px;
