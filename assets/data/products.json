@@ -1,0 +1,50 @@
+[
+    {
+        "path": "./assets/imgs/products/17-215x260.jpg",
+        "name": "Modular Modern",
+        "oldPrice": 9.00,
+        "newPrice": 7.00,
+        "starCount": 0,
+        "isSale": true
+    },
+    {
+        "path": "./assets/imgs/products/26-215x260.jpg",
+        "name": "Modular Modern",
+        "oldPrice": 0.00,
+        "newPrice": 10.00,
+        "starCount": 4,
+        "isSale": false
+    },
+    {
+        "path": "./assets/imgs/products/10-215x260.jpg",
+        "name": "Modular Modern",
+        "oldPrice": 3.00,
+        "newPrice": 2.00,
+        "starCount": 0,
+        "isSale": true
+    },
+    {
+        "path": "./assets/imgs/products/24-215x260.jpg",
+        "name": "Modular Modern",
+        "oldPrice": 0.00,
+        "newPrice": 13.00,
+        "starCount": 0,
+        "isSale": false
+    },
+    {
+        "path": "./assets/imgs/products/3-215x260.jpg",
+        "name": "Modular Modern",
+        "oldPrice": 9.00,
+        "newPrice": 14.00,
+        "starCount": 0,
+        "isSale": false
+    },
+    {
+        "path": "./assets/imgs/products/3-215x260.jpg",
+        "name": "Modular Modern",
+        "oldPrice": 9.00,
+        "newPrice": 14.00,
+        "starCount": 0,
+        "isSale": false
+    }
+]

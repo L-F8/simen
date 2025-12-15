@@ -17,12 +17,17 @@
     margin: 0;
     box-sizing: inherit;
     scrollbar-width: smooth;
+    font-family: 'Poppins', sans-serif;
 }
 
 body {
     box-sizing: border-box;
     font-size: 62.5%;
     line-height: 1.6rem;
+}
+
+body,
+html {
     font-family: 'Poppins', sans-serif;
 }
 

@@ -189,6 +189,11 @@
               <a href="#" class="menu-bottom__cart">
                 <i class="fa-solid fa-shopping-cart"></i>
                 <span class="menu-bottom__cart-count">0</span> ( items )
+                <div class="menu-bottom__cart--products transition-default">
+                  <ul>
+                    <li>No products in the cart.</li>
+                  </ul>
+                </div>
               </a>
             </div>
             <div class="menu-bottom__hidden-search">
@@ -223,19 +228,62 @@
             </div>
             <div class="image-layout-animation flex-col-2">
               <div class="image-animation__first">
-                <img src="./assets/imgs/5.png" alt="" />
+                <a href="#">
+                  <img src="./assets/imgs/5.png" alt="" />
+                </a>
               </div>
               <div class="image-animation__second">
-                <div class="flex-col-2">
-                  <img src="./assets/imgs/banner1-300x286.jpg" alt="" />
+                <div class="flex-col-2 sofa-italia">
+                  <a href="#">
+                    <img src="./assets/imgs/banner1-300x286.jpg" alt="" />
+                  </a>
                 </div>
-                <div class="flex-col-2">
-                  <img src="./assets/imgs/banner2-300x286.jpg" alt="" />
+                <div class="flex-col-2 discount-15-percent">
+                  <a href="#">
+                    <img src="./assets/imgs/banner2-300x286.jpg" alt="" />
+                  </a>
                 </div>
               </div>
             </div>
           </div>
         </div>
+
+        <div class="padding-0-15">
+          <div class="content-box">
+            <div class="product-choose grid-col-2-auto">
+              <ul>
+                <li>
+                  <a href="#" class="product-choose__link latest">
+                    <span>Latest</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="product-choose__link best-seller">
+                    <span>Best Seller</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="product-choose__link">
+                    <span>Featured</span>
+                  </a>
+                </li>
+              </ul>
+              <div class="line"></div>
+            </div>
+            <div id="product-wrapper" class="product-wrapper grid-col-5"></div>
+            <div
+              style="
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin: 10px 0;
+              "
+            >
+              <button type="button" id="loadMoreBtn">Load More Items</button>
+            </div>
+          </div>
+        </div>
+
         <div class="padding-0-15">
           <div class="content-box buy-now-group grid-col-2-auto">
             <div class="buy-now-col">
@@ -452,5 +500,6 @@
     </div> -->
 
     <script src="./assets/js/main.js"></script>
+    <script src="./assets/js/main-fetch.js"></script>
   </body>
 </html>

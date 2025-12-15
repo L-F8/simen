@@ -18,6 +18,15 @@ selectGroups.forEach((select) => {
 })
 
 
+const menuBottomCart = document.querySelector('.menu-bottom__cart')
+const productsList = menuBottomCart.querySelector('.transition-default')
+menuBottomCart.addEventListener('mouseenter', () => {
+    productsList.classList.add('transition-hover')
+})
+menuBottomCart.addEventListener('mouseleave', () => {
+    productsList.classList.remove('transition-hover')
+})
+
 
 // Xu ly khi load trang thi se hien overlay
 document.addEventListener('DOMContentLoaded', () => {
