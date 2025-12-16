@@ -21,13 +21,31 @@ function setButtonState({ text, disabled }) {
     loadMoreBtn.disabled = disabled
 }
 
-function renderProduct(p) {
+function renderProduct(p, index) {
     return `
-        <div class="product-item">
+        <div class="product-item fade-item" style="--delay:${index * 0.1}s">
+            ${p.isSale ? `<span class="on-sale" id="is-sale">Sale!</span>` : ""}
             <div class="product-image">
-                <a href="#">
+                <a class="product-image__wrap" href="#">
                 <img src="${p.path}" alt="${p.name}" />
                 </a>
+                <div class="product-actions">
+                    <a class="product-action__group add-to-cart" href="#">
+                        <i class="fa-solid fa-shopping-cart"></i>
+                        Add To Cart
+                    </a>
+                    <div class="product-action__group emoji-action">
+                        <a class="emoji-action__btn add-to-wishlist-btn" href="#">
+                            <i class="fa-solid fa-heart"></i>
+                        </a>
+                        <a class="emoji-action__btn compare-btn" href="#">
+                            <i class="fa-solid fa-shuffle"></i>
+                        </a>
+                        <a class="emoji-action__btn quick-view-btn" href="#">
+                            <i class="fa-solid fa-eye"></i>
+                        </a>
+                    </div>
+                </div>
             </div>
 
             <div class="product-text-group">
@@ -42,7 +60,7 @@ function renderProduct(p) {
                 </p>
 
                 <span class="product-rating">
-                ${Array.from({ length: 5 })
+                    ${Array.from({ length: 5 })
             .map((_, i) =>
                 `<i class="fa-${i < p.starCount ? "solid" : "regular"} fa-star"></i>`
             )
@@ -51,6 +69,20 @@ function renderProduct(p) {
             </div>
         </div>
     `;
+}
+
+function handleImageLoading() {
+    const images = productWrapper.querySelectorAll(".product-image img");
+
+    images.forEach(img => {
+        if (img.complete) {
+            img.closest(".product-image").classList.add("loaded");
+        } else {
+            img.addEventListener("load", () => {
+                img.closest(".product-image").classList.add("loaded");
+            });
+        }
+    });
 }
 
 function loadMore() {
@@ -64,8 +96,11 @@ function loadMore() {
 
         productWrapper.insertAdjacentHTML(
             "beforeend",
-            nextProducts.map(renderProduct).join("")
+            nextProducts.map((p, i) => renderProduct(p, currentIndex + i))
+                .join("")
         )
+
+        handleImageLoading()
 
         currentIndex += LIMIT
 

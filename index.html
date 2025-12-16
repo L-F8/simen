@@ -44,7 +44,7 @@
     <header class="header">
       <div class="menu-top">
         <div class="container">
-          <div class="common-flex" style="justify-content: space-between">
+          <div class="common-flex menu-top__flex">
             <ul class="menu-top__left padding-0-15">
               <li class="select-group">
                 <span class="select-group-span" style="position: relative">
@@ -111,7 +111,7 @@
               </a>
             </div>
             <div class="menu-center__wrap-text padding-0-15 grid-col-3">
-              <div class="menu-center__grid-group">
+              <div class="menu-center__grid-group grid-auto-1fr">
                 <span>
                   <i class="fa-solid fa-truck"></i>
                 </span>
@@ -122,7 +122,7 @@
                   <p><span>On order over $100</span></p>
                 </div>
               </div>
-              <div class="menu-center__grid-group">
+              <div class="menu-center__grid-group grid-auto-1fr">
                 <span>
                   <i class="fa-solid fa-cloud-arrow-up"></i>
                 </span>
@@ -133,7 +133,7 @@
                   <p><span>Lorem ipsum dolor sit amet</span></p>
                 </div>
               </div>
-              <div class="menu-center__grid-group">
+              <div class="menu-center__grid-group grid-auto-1fr">
                 <span>
                   <i class="fa-solid fa-gift"></i>
                 </span>
@@ -151,7 +151,7 @@
       <div class="menu-bottom">
         <div class="container">
           <div class="menu-bottom__wrapper">
-            <div class="menu-bottom__navbar">
+            <div class="menu-bottom__navbar grid">
               <ul class="menu-bottom__list">
                 <li class="menu-bottom__item">
                   <a href="#" class="menu-bottom__item-link active">Home</a>
@@ -196,7 +196,7 @@
                 </div>
               </a>
             </div>
-            <div class="menu-bottom__hidden-search">
+            <div class="menu-bottom__hidden-search grid-1fr-auto">
               <input
                 type="search"
                 name=""
@@ -213,6 +213,7 @@
     <!-- Content -->
     <main class="main">
       <div class="container">
+        <!-- Banner section 1 -->
         <div class="padding-0-15">
           <div class="content-box image-show-section">
             <div class="image-show flex-col-2">
@@ -248,9 +249,10 @@
           </div>
         </div>
 
+        <!-- Latest, Best Seller, Featured -->
         <div class="padding-0-15">
           <div class="content-box">
-            <div class="product-choose grid-col-2-auto">
+            <div class="product-choose grid-auto-1fr">
               <ul>
                 <li>
                   <a href="#" class="product-choose__link latest">
@@ -272,19 +274,13 @@
             </div>
             <!-- Fetch products from main-fetch.js for product-wrapper -->
             <div id="product-wrapper" class="product-wrapper grid-col-5"></div>
-            <div
-              style="
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                margin: 20px 0;
-              "
-            >
+            <div style="text-align: center; margin: 20px 0">
               <button type="button" id="loadMoreBtn">Load More Items</button>
             </div>
           </div>
         </div>
 
+        <!-- Atex - Tools -->
         <div class="padding-0-15">
           <div class="content-box buy-now-group grid-col-2-auto">
             <div class="buy-now-col">
@@ -312,6 +308,52 @@
             </div>
           </div>
         </div>
+
+        <!-- Suggest Collection -->
+        <div class="padding-0-15">
+          <div class="content-box">
+            <div class="grid-auto-1fr">
+              <h2 class="suggest-collection__title">Suggest Collection</h2>
+              <!-- <div class="line"></div> -->
+            </div>
+          </div>
+        </div>
+
+        <!-- Banner section 2 -->
+        <div class="padding-0-15">
+          <div class="content-box grid-col-3-auto banner-section-2">
+            <div class="image-animation__first banner-section-2__left">
+              <a href="#">
+                <img src="./assets/imgs/baner-shipping.jpg" alt="" />
+              </a>
+            </div>
+            <div class="discount-15-percent banner-section-2__center">
+              <a href="#">
+                <img src="./assets/imgs/banner3.jpg" alt="" />
+              </a>
+            </div>
+            <div class="sofa-italia banner-section-2__right">
+              <a href="#">
+                <img src="./assets/imgs/banner4.jpg" alt="" />
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Most Viewed -->
+        <div class="padding-0-15">
+          <div class="content-box"></div>
+        </div>
+
+        <!-- Latest Posts -->
+        <div class="padding-0-15">
+          <div class="content-box"></div>
+        </div>
+
+        <!-- Slider Brand -->
+        <div class="padding-0-15">
+          <div class="context-box"></div>
+        </div>
       </div>
     </main>
 
@@ -323,7 +365,7 @@
             <div class="footer-group">
               <h1 class="group-footer__title">Contact Us</h1>
               <div class="group-footer__list">
-                <div class="contact-group">
+                <div class="contact-group grid-auto-1fr">
                   <span>
                     <i class="fa-solid fa-home"></i>
                   </span>
@@ -334,7 +376,7 @@
                     </p>
                   </div>
                 </div>
-                <div class="contact-group">
+                <div class="contact-group grid-auto-1fr">
                   <span>
                     <i class="fa-solid fa-phone"></i>
                   </span>
@@ -343,7 +385,7 @@
                     <p style="color: #666; font-size: 12px">(12) 3 456 7895</p>
                   </div>
                 </div>
-                <div class="contact-group">
+                <div class="contact-group grid-auto-1fr">
                   <span>
                     <i class="fa-solid fa-envelope"></i>
                   </span>
@@ -444,7 +486,7 @@
     </footer>
     <footer style="border-top: 1px solid #eaeaea">
       <div class="container">
-        <div class="padding-0-15 second-footer">
+        <div class="padding-0-15 second-footer common-flex">
           <p style="color: #666; font-size: 12px">
             © 2015 Ecommerce software by Wordpress™ Designed by SNSTheme.Com
           </p>

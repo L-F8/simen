@@ -1,8 +1,6 @@
 // Xu ly chung cho cac menu item khi hover vao cac menu item 
 // thi hien thi cac dropdown su dung chung transition 
-
 const selectGroups = document.querySelectorAll('.select-group')
-
 selectGroups.forEach((select) => {
     const dropdown = select.querySelector('.transition-default')
 

@@ -15,15 +15,15 @@
 * {
     padding: 0;
     margin: 0;
+    font-family: 'Poppins', sans-serif;
     box-sizing: inherit;
     scrollbar-width: smooth;
-    font-family: 'Poppins', sans-serif;
 }
 
 body {
-    box-sizing: border-box;
     font-size: 62.5%;
     line-height: 1.6rem;
+    box-sizing: border-box;
 }
 
 body,
@@ -55,8 +55,8 @@ h6 {
 button,
 input,
 select {
-    outline: none;
     border: none;
+    outline: none;
 }
 
 .btn-return {
@@ -67,12 +67,12 @@ select {
     border-radius: 100%;
     padding: 17px 20px;
     font-size: 16px;
-    text-align: center;
-    cursor: pointer;
     color: #555;
+    text-align: center;
     background-color: #fff;
     opacity: 0;
     visibility: hidden;
+    cursor: pointer;
     transition: color 0.3s ease, background-color 0.3s ease;
 }
 
@@ -108,12 +108,37 @@ select {
     width: calc(100% / 2);
 }
 
+.flex-col-3 {
+    width: calc(100% / 3);
+}
+
 .flex-col-4 {
     width: calc(100% / 4);
 }
 
 .flex-col-5 {
     width: calc(100% / 5);
+}
+
+.flex-col-6 {
+    width: calc(100% / 6);
+}
+
+.grid,
+.grid-col-2,
+.grid-col-2-auto,
+.grid-col-3,
+.grid-col-3-auto,
+.grid-col-4,
+.grid-col-4-auto,
+.grid-col-5,
+.grid-col-5-auto,
+.grid-col-6,
+.grid-col-6-auto,
+.grid-1fr-auto,
+.grid-auto-1fr {
+    display: grid;
+    align-items: center;
 }
 
 .grid-col-2 {
@@ -148,6 +173,22 @@ select {
     grid-template-columns: repeat(5, auto);
 }
 
+.grid-col-6 {
+    grid-template-columns: repeat(6, 1fr);
+}
+
+.grid-col-6-auto {
+    grid-template-columns: repeat(6, auto);
+}
+
+.grid-1fr-auto {
+    grid-template-columns: 1fr auto;
+}
+
+.grid-auto-1fr {
+    grid-template-columns: auto 1fr;
+}
+
 .flag-icon {
     margin-right: 4px;
 }
@@ -161,8 +202,8 @@ select {
 
     transition:
         opacity 0.5s ease,
-        transform 0.5s ease,
-        visibility 0.5s ease;
+        visibility 0.5s ease,
+        transform 0.5s ease;
 }
 
 .transition-hover {
