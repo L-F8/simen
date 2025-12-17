@@ -21,13 +21,45 @@ function setButtonState({ text, disabled }) {
     loadMoreBtn.disabled = disabled
 }
 
+function renderPrice(p) {
+    const price = p.price
+
+    // VARIABLE / GROUPED PRODUCT
+    if (p.type === "variable" || p.type === "grouped") {
+        return `
+            <span class="product-price__new-price">
+                $${price.min.toFixed(2)} – $${price.max.toFixed(2)}
+            </span>
+        `
+    }
+
+    // SIMPLE / EXTERNAL PRODUCT - CÓ SALE
+    if (price.sale && price.sale < price.regular) {
+        return `
+            <span class="product-price__old-price">
+                $${price.regular.toFixed(2)}
+            </span>
+            <span class="product-price__new-price">
+                $${price.sale.toFixed(2)}
+            </span>
+        `
+    }
+
+    // SIMPLE / EXTERNAL PRODUCT - KHÔNG SALE
+    return `
+        <span class="product-price__new-price">
+            $${price.regular.toFixed(2)}
+        </span>
+    `
+}
+
 function renderProduct(p, index) {
     return `
         <div class="product-item fade-item" style="--delay:${index * 0.1}s">
-            ${p.isSale ? `<span class="on-sale" id="is-sale">Sale!</span>` : ""}
+            ${p.isSale ? `<span class="on-sale">Sale!</span>` : ""}
             <div class="product-image">
                 <a class="product-image__wrap" href="#">
-                <img src="${p.path}" alt="${p.name}" />
+                    <img src="${p.path}" alt="${p.name}" />
                 </a>
                 <div class="product-actions">
                     <a class="product-action__group add-to-cart" href="#">
@@ -37,12 +69,15 @@ function renderProduct(p, index) {
                     <div class="product-action__group emoji-action">
                         <a class="emoji-action__btn add-to-wishlist-btn" href="#">
                             <i class="fa-solid fa-heart"></i>
+                            <span class="emoji-title">Add to Wishlist</span>
                         </a>
                         <a class="emoji-action__btn compare-btn" href="#">
                             <i class="fa-solid fa-shuffle"></i>
+                            <span class="emoji-title">Compare</span>
                         </a>
                         <a class="emoji-action__btn quick-view-btn" href="#">
                             <i class="fa-solid fa-eye"></i>
+                            <span class="emoji-title">Quick View</span>
                         </a>
                     </div>
                 </div>
@@ -52,17 +87,13 @@ function renderProduct(p, index) {
                 <a href="#" class="product-name">${p.name}</a>
 
                 <p class="product-price">
-                ${p.oldPrice > 0
-            ? `<span class="product-price__old-price">$${p.oldPrice.toFixed(2)}</span>`
-            : ""
-        }
-                <span class="product-price__new-price">$${p.newPrice.toFixed(2)}</span>
+                    ${renderPrice(p)}
                 </p>
 
                 <span class="product-rating">
                     ${Array.from({ length: 5 })
             .map((_, i) =>
-                `<i class="fa-${i < p.starCount ? "solid" : "regular"} fa-star"></i>`
+                `<i class="fa-${i < p.rating ? "solid" : "regular"} fa-star"></i>`
             )
             .join("")}
                 </span>

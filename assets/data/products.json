@@ -1,210 +1,314 @@
 [
     {
-        "path": "./assets/imgs/products/17-215x260.jpg",
+        "id": 1,
         "name": "Modular Modern",
-        "oldPrice": 9.00,
-        "newPrice": 7.00,
-        "starCount": 0,
+        "type": "simple",
+        "path": "./assets/imgs/products/17-215x260.jpg",
+        "price": {
+            "regular": 9,
+            "sale": 7
+        },
+        "rating": 0,
         "isSale": true
     },
     {
-        "path": "./assets/imgs/products/26-215x260.jpg",
+        "id": 2,
         "name": "Modular Modern",
-        "oldPrice": 0.00,
-        "newPrice": 10.00,
-        "starCount": 4,
+        "type": "simple",
+        "path": "./assets/imgs/products/26-215x260.jpg",
+        "price": {
+            "regular": 10,
+            "sale": null
+        },
+        "rating": 4,
         "isSale": false
     },
     {
-        "path": "./assets/imgs/products/10-215x260.jpg",
+        "id": 3,
         "name": "Modular Modern",
-        "oldPrice": 3.00,
-        "newPrice": 2.00,
-        "starCount": 0,
+        "type": "simple",
+        "path": "./assets/imgs/products/10-215x260.jpg",
+        "price": {
+            "regular": 3,
+            "sale": 2
+        },
+        "rating": 0,
         "isSale": true
     },
     {
+        "id": 4,
+        "name": "Modular Modern",
+        "type": "simple",
         "path": "./assets/imgs/products/24-215x260.jpg",
-        "name": "Modular Modern",
-        "oldPrice": 0.00,
-        "newPrice": 13.00,
-        "starCount": 0,
+        "price": {
+            "regular": 13,
+            "sale": null
+        },
+        "rating": 0,
         "isSale": false
     },
     {
+        "id": 5,
+        "name": "Modular Modern",
+        "type": "simple",
         "path": "./assets/imgs/products/3-215x260.jpg",
-        "name": "Modular Modern",
-        "oldPrice": 0.00,
-        "newPrice": 14.00,
-        "starCount": 0,
+        "price": {
+            "regular": 14,
+            "sale": null
+        },
+        "rating": 0,
         "isSale": false
     },
     {
+        "id": 6,
+        "name": "Modular Modern",
+        "type": "simple",
         "path": "./assets/imgs/products/19-215x260.jpg",
-        "name": "Modular Modern",
-        "oldPrice": 0.00,
-        "newPrice": 9.00,
-        "starCount": 0,
+        "price": {
+            "regular": 9,
+            "sale": null
+        },
+        "rating": 0,
         "isSale": false
     },
     {
+        "id": 7,
+        "name": "Modular Modern",
+        "type": "simple",
         "path": "./assets/imgs/products/17-215x260.jpg",
-        "name": "Modular Modern",
-        "oldPrice": 0.00,
-        "newPrice": 600.00,
-        "starCount": 4,
+        "price": {
+            "regular": 600,
+            "sale": null
+        },
+        "rating": 4,
         "isSale": false
     },
     {
-        "path": "./assets/imgs/products/10-215x260.jpg",
+        "id": 8,
         "name": "Modular Modern",
-        "oldPrice": 3.00,
-        "newPrice": 2.00,
-        "starCount": 4,
+        "type": "simple",
+        "path": "./assets/imgs/products/10-215x260.jpg",
+        "price": {
+            "regular": 3,
+            "sale": 2
+        },
+        "rating": 4,
         "isSale": true
     },
     {
-        "path": "./assets/imgs/products/26-215x260.jpg",
+        "id": 9,
         "name": "External/Affiliate Product",
-        "oldPrice": 9.00,
-        "newPrice": 8.00,
-        "starCount": 4,
+        "type": "external",
+        "path": "./assets/imgs/products/26-215x260.jpg",
+        "price": {
+            "regular": 9,
+            "sale": 8
+        },
+        "rating": 4,
         "isSale": true
     },
     {
-        "path": "./assets/imgs/products/24-215x260.jpg",
+        "id": 10,
         "name": "Variable Product",
-        "oldPrice": 7.00,
-        "newPrice": 9.00,
-        "starCount": 0,
+        "type": "variable",
+        "path": "./assets/imgs/products/24-215x260.jpg",
+        "price": {
+            "min": 7,
+            "max": 9
+        },
+        "rating": 0,
         "isSale": false
     },
     {
+        "id": 11,
+        "name": "Modular Modern",
+        "type": "simple",
         "path": "./assets/imgs/products/3-215x260.jpg",
-        "name": "Modular Modern",
-        "oldPrice": 0.00,
-        "newPrice": 9.00,
-        "starCount": 4,
+        "price": {
+            "regular": 9,
+            "sale": null
+        },
+        "rating": 4,
         "isSale": false
     },
     {
+        "id": 12,
+        "name": "Modular Modern",
+        "type": "simple",
         "path": "./assets/imgs/products/19-215x260.jpg",
-        "name": "Modular Modern",
-        "oldPrice": 0.00,
-        "newPrice": 9.00,
-        "starCount": 4,
+        "price": {
+            "regular": 9,
+            "sale": null
+        },
+        "rating": 4,
         "isSale": false
     },
     {
+        "id": 13,
+        "name": "Modular Modern",
+        "type": "simple",
         "path": "./assets/imgs/products/28-215x260.jpg",
-        "name": "Modular Modern",
-        "oldPrice": 0.00,
-        "newPrice": 9.00,
-        "starCount": 0,
+        "price": {
+            "regular": 9,
+            "sale": null
+        },
+        "rating": 0,
         "isSale": false
     },
     {
-        "path": "./assets/imgs/products/15-215x260.jpg",
+        "id": 14,
         "name": "Donec cursus",
-        "oldPrice": 0.00,
-        "newPrice": 15.00,
-        "starCount": 0,
+        "type": "simple",
+        "path": "./assets/imgs/products/15-215x260.jpg",
+        "price": {
+            "regular": 15,
+            "sale": null
+        },
+        "rating": 0,
         "isSale": false
     },
     {
-        "path": "./assets/imgs/products/11-215x260.jpg",
+        "id": 15,
         "name": "Grouped Product",
-        "oldPrice": 9.00,
-        "newPrice": 15.00,
-        "starCount": 4,
+        "type": "grouped",
+        "path": "./assets/imgs/products/11-215x260.jpg",
+        "price": {
+            "min": 9,
+            "max": 15
+        },
+        "rating": 4,
         "isSale": false
     },
     {
-        "path": "./assets/imgs/products/21-215x260.jpg",
+        "id": 16,
         "name": "scelerisque accumsan",
-        "oldPrice": 15.00,
-        "newPrice": 12.00,
-        "starCount": 4,
+        "type": "simple",
+        "path": "./assets/imgs/products/21-215x260.jpg",
+        "price": {
+            "regular": 15,
+            "sale": 12
+        },
+        "rating": 4,
         "isSale": true
     },
     {
-        "path": "./assets/imgs/products/29-215x260.jpg",
+        "id": 17,
         "name": "Urna in eros",
-        "oldPrice": 15.00,
-        "newPrice": 12.00,
-        "starCount": 4,
+        "type": "simple",
+        "path": "./assets/imgs/products/29-215x260.jpg",
+        "price": {
+            "regular": 15,
+            "sale": 12
+        },
+        "rating": 4,
         "isSale": true
     },
     {
-        "path": "./assets/imgs/products/31-215x260.jpg",
+        "id": 18,
         "name": "Praesent at",
-        "oldPrice": 0.00,
-        "newPrice": 15.00,
-        "starCount": 0,
+        "type": "simple",
+        "path": "./assets/imgs/products/31-215x260.jpg",
+        "price": {
+            "regular": 15,
+            "sale": null
+        },
+        "rating": 0,
         "isSale": false
     },
     {
-        "path": "./assets/imgs/products/20-215x260.jpg",
+        "id": 19,
         "name": "Laoreet ultrices",
-        "oldPrice": 0.00,
-        "newPrice": 35.00,
-        "starCount": 4,
+        "type": "simple",
+        "path": "./assets/imgs/products/20-215x260.jpg",
+        "price": {
+            "regular": 35,
+            "sale": null
+        },
+        "rating": 4,
         "isSale": false
     },
     {
-        "path": "./assets/imgs/products/7-215x260.jpg",
+        "id": 20,
         "name": "Nisi vitae",
-        "oldPrice": 0.00,
-        "newPrice": 35.00,
-        "starCount": 4,
+        "type": "simple",
+        "path": "./assets/imgs/products/7-215x260.jpg",
+        "price": {
+            "regular": 35,
+            "sale": null
+        },
+        "rating": 4,
         "isSale": false
     },
     {
-        "path": "./assets/imgs/products/32-215x260.jpg",
+        "id": 21,
         "name": "Maecenas consequat",
-        "oldPrice": 0.00,
-        "newPrice": 35.00,
-        "starCount": 4,
+        "type": "simple",
+        "path": "./assets/imgs/products/32-215x260.jpg",
+        "price": {
+            "regular": 35,
+            "sale": null
+        },
+        "rating": 4,
         "isSale": false
     },
     {
-        "path": "./assets/imgs/products/9-215x260.jpg",
+        "id": 22,
         "name": "Patient sofa",
-        "oldPrice": 0.00,
-        "newPrice": 35.00,
-        "starCount": 4,
+        "type": "simple",
+        "path": "./assets/imgs/products/9-215x260.jpg",
+        "price": {
+            "regular": 35,
+            "sale": null
+        },
+        "rating": 4,
         "isSale": false
     },
     {
-        "path": "./assets/imgs/products/8-215x260.jpg",
+        "id": 23,
         "name": "Iaculis orci",
-        "oldPrice": 0.00,
-        "newPrice": 35.00,
-        "starCount": 4,
+        "type": "simple",
+        "path": "./assets/imgs/products/8-215x260.jpg",
+        "price": {
+            "regular": 35,
+            "sale": null
+        },
+        "rating": 4,
         "isSale": false
     },
     {
-        "path": "./assets/imgs/products/27-215x260.jpg",
+        "id": 24,
         "name": "Variable Product – Color",
-        "oldPrice": 0.00,
-        "newPrice": 45.00,
-        "starCount": 4,
+        "type": "variable",
+        "path": "./assets/imgs/products/27-215x260.jpg",
+        "price": {
+            "min": 30,
+            "max": 45
+        },
+        "rating": 4,
         "isSale": true
     },
     {
-        "path": "./assets/imgs/products/33-215x260.jpg",
+        "id": 25,
         "name": "Variable Product – Image",
-        "oldPrice": 0.00,
-        "newPrice": 35.00,
-        "starCount": 4,
+        "type": "variable",
+        "path": "./assets/imgs/products/33-215x260.jpg",
+        "price": {
+            "min": 18,
+            "max": 35
+        },
+        "rating": 4,
         "isSale": false
     },
     {
-        "path": "./assets/imgs/products/22-215x260.jpg",
+        "id": 26,
         "name": "Curabitur non",
-        "oldPrice": 60.00,
-        "newPrice": 54.00,
-        "starCount": 0,
+        "type": "simple",
+        "path": "./assets/imgs/products/22-215x260.jpg",
+        "price": {
+            "regular": 60,
+            "sale": 54
+        },
+        "rating": 0,
         "isSale": true
     }
 ]

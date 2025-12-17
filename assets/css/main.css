@@ -601,6 +601,50 @@
     padding-left: 0;
 }
 
+.best-seller {
+    position: relative;
+}
+
+.product-choose__link span {
+    position: relative;
+}
+
+.product-choose__link span::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background: var(--text-color-333);
+    visibility: hidden;
+    opacity: 0;
+}
+
+.product-choose__link::after {
+    content: "";
+    position: absolute;
+    border: 5px solid;
+    border-color: #000000 transparent transparent transparent;
+    top: calc(100% + 2px);
+    left: 50%;
+    visibility: hidden;
+    opacity: 0;
+    transform: translateX(-50%);
+}
+
+.product-choose__link.latest::after {
+    left: 40%;
+}
+
+.product-choose__link.active::after,
+.product-choose__link:hover::after,
+.product-choose__link.active span::after,
+.product-choose__link:hover span::after {
+    visibility: visible;
+    opacity: 1;
+}
+
 .best-seller::before,
 .best-seller::after {
     content: "";
@@ -784,10 +828,77 @@
     flex: 1;
     text-align: center;
     color: var(--text-color-666);
+    position: relative;
 }
 
 .emoji-action a:hover i {
     color: var(--text-hover-color);
+}
+
+.compare-btn::before,
+.compare-btn::after {
+    position: absolute;
+    content: "";
+    display: block;
+    width: 1px;
+    height: 148%;
+    background-color: #eaeaea;
+    top: -6px;
+}
+
+.compare-btn::before {
+    left: -4px;
+}
+
+.compare-btn::after {
+    right: -4px;
+}
+
+.emoji-title {
+    position: absolute;
+    bottom: calc(100% + 10px);
+    padding: 2px 6px;
+    width: max-content;
+    font-size: 9px;
+    text-align: center;
+    color: #fff;
+    line-height: 1.8;
+    text-transform: initial;
+    background-color: var(--text-hover-color);
+    border-radius: 3px;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.3s ease;
+    z-index: 1;
+}
+
+.add-to-wishlist-btn .emoji-title {
+    left: 2px;
+}
+
+.emoji-title::after {
+    content: "";
+    position: absolute;
+    border: 10px solid;
+    border-color: var(--text-hover-color) transparent transparent transparent;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 100%;
+}
+
+.add-to-wishlist-btn:hover .emoji-title,
+.compare-btn:hover .emoji-title,
+.quick-view-btn:hover .emoji-title {
+    visibility: visible;
+    opacity: 1;
+}
+
+.compare-btn .emoji-title {
+    left: 10px;
+}
+
+.quick-view-btn .emoji-title {
+    left: 0;
 }
 
 .product-text-group {
@@ -809,6 +920,23 @@
 .product-price__old-price {
     color: var(--text-color-666);
     font-size: 13px;
+}
+
+.product-price__old-price {
+    position: relative;
+}
+
+.product-price__old-price::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%) rotate(-10deg);
+    display: block;
+    width: 92%;
+    height: 1px;
+    background-color: #666;
+
 }
 
 .product-name:hover {
@@ -900,6 +1028,8 @@
     padding: 8px 26px !important;
 }
 
+
+/* =============== BANNER SECTION 2 ================ */
 .banner-section-2 {
     gap: 30px;
 }
@@ -925,8 +1055,26 @@
     height: 100%;
 }
 
+
+/* ==================== SUGGEST COLLECTION =================== */
 .suggest-collection__title {
     margin: 30px 0 15px;
+    font-size: 22px;
+    color: var(--text-color-333);
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+
+
+/* ================== MOST VIEWED ================= */
+
+
+
+/* ================== LATEST POSTS ================= */
+.latest-post__title {
+    margin: 15px 0;
+    padding-right: 20px;
     font-size: 22px;
     color: var(--text-color-333);
     font-weight: bold;
