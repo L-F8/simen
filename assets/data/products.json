@@ -2,6 +2,12 @@
     {
         "id": 1,
         "name": "Modular Modern",
+        "collection": [
+            "Good chair",
+            "Coffee chair",
+            "Ipsum Chair",
+            "Wood Chair"
+        ],
         "type": "simple",
         "path": "./assets/imgs/products/17-215x260.jpg",
         "price": {
@@ -14,6 +20,13 @@
     {
         "id": 2,
         "name": "Modular Modern",
+        "collection": [
+            "Office chair",
+            "Good chair",
+            "Coffee chair",
+            "Ipsum Chair",
+            "Living Room"
+        ],
         "type": "simple",
         "path": "./assets/imgs/products/26-215x260.jpg",
         "price": {
@@ -26,6 +39,13 @@
     {
         "id": 3,
         "name": "Modular Modern",
+        "collection": [
+            "Office chair",
+            "Good chair",
+            "Coffee chair",
+            "Ipsum Chair",
+            "Living Room"
+        ],
         "type": "simple",
         "path": "./assets/imgs/products/10-215x260.jpg",
         "price": {
@@ -38,6 +58,14 @@
     {
         "id": 4,
         "name": "Modular Modern",
+        "collection": [
+            "Office chair",
+            "Good chair",
+            "Coffee chair",
+            "Ipsum Chair",
+            "Wood Chair",
+            "Living Room"
+        ],
         "type": "simple",
         "path": "./assets/imgs/products/24-215x260.jpg",
         "price": {
@@ -50,6 +78,13 @@
     {
         "id": 5,
         "name": "Modular Modern",
+        "collection": [
+            "Office chair",
+            "Good chair",
+            "Coffee chair",
+            "Ipsum Chair",
+            "Living Room"
+        ],
         "type": "simple",
         "path": "./assets/imgs/products/3-215x260.jpg",
         "price": {
@@ -62,6 +97,13 @@
     {
         "id": 6,
         "name": "Modular Modern",
+        "collection": [
+            "Office chair",
+            "Good chair",
+            "Coffee chair",
+            "Ipsum Chair",
+            "Living Room"
+        ],
         "type": "simple",
         "path": "./assets/imgs/products/19-215x260.jpg",
         "price": {
@@ -74,6 +116,12 @@
     {
         "id": 7,
         "name": "Modular Modern",
+        "collection": [
+            "Good chair",
+            "Coffee chair",
+            "Ipsum Chair",
+            "Wood Chair"
+        ],
         "type": "simple",
         "path": "./assets/imgs/products/17-215x260.jpg",
         "price": {
@@ -86,6 +134,13 @@
     {
         "id": 8,
         "name": "Modular Modern",
+        "collection": [
+            "Office chair",
+            "Good chair",
+            "Coffee chair",
+            "Ipsum Chair",
+            "Living Room"
+        ],
         "type": "simple",
         "path": "./assets/imgs/products/10-215x260.jpg",
         "price": {
@@ -98,6 +153,13 @@
     {
         "id": 9,
         "name": "External/Affiliate Product",
+        "collection": [
+            "Office chair",
+            "Good chair",
+            "Coffee chair",
+            "Ipsum Chair",
+            "Living Room"
+        ],
         "type": "external",
         "path": "./assets/imgs/products/26-215x260.jpg",
         "price": {
@@ -110,6 +172,14 @@
     {
         "id": 10,
         "name": "Variable Product",
+        "collection": [
+            "Office chair",
+            "Good chair",
+            "Coffee chair",
+            "Ipsum Chair",
+            "Wood Chair",
+            "Living Room"
+        ],
         "type": "variable",
         "path": "./assets/imgs/products/24-215x260.jpg",
         "price": {
@@ -122,6 +192,13 @@
     {
         "id": 11,
         "name": "Modular Modern",
+        "collection": [
+            "Office chair",
+            "Good chair",
+            "Coffee chair",
+            "Ipsum Chair",
+            "Living Room"
+        ],
         "type": "simple",
         "path": "./assets/imgs/products/3-215x260.jpg",
         "price": {
@@ -134,6 +211,13 @@
     {
         "id": 12,
         "name": "Modular Modern",
+        "collection": [
+            "Office chair",
+            "Good chair",
+            "Coffee chair",
+            "Ipsum Chair",
+            "Living Room"
+        ],
         "type": "simple",
         "path": "./assets/imgs/products/19-215x260.jpg",
         "price": {
@@ -146,6 +230,13 @@
     {
         "id": 13,
         "name": "Modular Modern",
+        "collection": [
+            "Office chair",
+            "Good chair",
+            "Coffee chair",
+            "Ipsum Chair",
+            "Living Room"
+        ],
         "type": "simple",
         "path": "./assets/imgs/products/28-215x260.jpg",
         "price": {
@@ -158,6 +249,13 @@
     {
         "id": 14,
         "name": "Donec cursus",
+        "collection": [
+            "Office chair",
+            "Good chair",
+            "Coffee chair",
+            "Ipsum Chair",
+            "Living Room"
+        ],
         "type": "simple",
         "path": "./assets/imgs/products/15-215x260.jpg",
         "price": {
@@ -170,6 +268,13 @@
     {
         "id": 15,
         "name": "Grouped Product",
+        "collection": [
+            "Office chair",
+            "Good chair",
+            "Coffee chair",
+            "Ipsum Chair",
+            "Living Room"
+        ],
         "type": "grouped",
         "path": "./assets/imgs/products/11-215x260.jpg",
         "price": {
@@ -182,6 +287,11 @@
     {
         "id": 16,
         "name": "scelerisque accumsan",
+        "collection": [
+            "Outdoor table",
+            "Coffee Tables",
+            "Living Room"
+        ],
         "type": "simple",
         "path": "./assets/imgs/products/21-215x260.jpg",
         "price": {
@@ -194,6 +304,10 @@
     {
         "id": 17,
         "name": "Urna in eros",
+        "collection": [
+            "Outdoor table",
+            "Living Room"
+        ],
         "type": "simple",
         "path": "./assets/imgs/products/29-215x260.jpg",
         "price": {
@@ -206,6 +320,11 @@
     {
         "id": 18,
         "name": "Praesent at",
+        "collection": [
+            "Outdoor table",
+            "Coffee Tables",
+            "Living Room"
+        ],
         "type": "simple",
         "path": "./assets/imgs/products/31-215x260.jpg",
         "price": {
@@ -218,6 +337,14 @@
     {
         "id": 19,
         "name": "Laoreet ultrices",
+        "collection": [
+            "Office chair",
+            "Sofas",
+            "Good chair",
+            "Ipsum Chair",
+            "Wood Chair",
+            "Living Room"
+        ],
         "type": "simple",
         "path": "./assets/imgs/products/20-215x260.jpg",
         "price": {
@@ -230,6 +357,13 @@
     {
         "id": 20,
         "name": "Nisi vitae",
+        "collection": [
+            "Office chair",
+            "Sofas",
+            "Good chair",
+            "Coffee chair",
+            "Living Room"
+        ],
         "type": "simple",
         "path": "./assets/imgs/products/7-215x260.jpg",
         "price": {
@@ -242,6 +376,13 @@
     {
         "id": 21,
         "name": "Maecenas consequat",
+        "collection": [
+            "Office chair",
+            "Sofas",
+            "Good chair",
+            "Coffee chair",
+            "Living Room"
+        ],
         "type": "simple",
         "path": "./assets/imgs/products/32-215x260.jpg",
         "price": {
@@ -254,6 +395,13 @@
     {
         "id": 22,
         "name": "Patient sofa",
+        "collection": [
+            "Office chair",
+            "Sofas",
+            "Good chair",
+            "Coffee chair",
+            "Living Room"
+        ],
         "type": "simple",
         "path": "./assets/imgs/products/9-215x260.jpg",
         "price": {
@@ -266,6 +414,13 @@
     {
         "id": 23,
         "name": "Iaculis orci",
+        "collection": [
+            "Office chair",
+            "Sofas",
+            "Good chair",
+            "Coffee chair",
+            "Living Room"
+        ],
         "type": "simple",
         "path": "./assets/imgs/products/8-215x260.jpg",
         "price": {
@@ -278,6 +433,13 @@
     {
         "id": 24,
         "name": "Variable Product – Color",
+        "collection": [
+            "Office chair",
+            "Sofas",
+            "Good chair",
+            "Coffee chair",
+            "Living Room"
+        ],
         "type": "variable",
         "path": "./assets/imgs/products/27-215x260.jpg",
         "price": {
@@ -290,6 +452,13 @@
     {
         "id": 25,
         "name": "Variable Product – Image",
+        "collection": [
+            "Office chair",
+            "Sofas",
+            "Good chair",
+            "Coffee chair",
+            "Living Room"
+        ],
         "type": "variable",
         "path": "./assets/imgs/products/33-215x260.jpg",
         "price": {
@@ -302,6 +471,13 @@
     {
         "id": 26,
         "name": "Curabitur non",
+        "collection": [
+            "Office chair",
+            "Sofas",
+            "Good chair",
+            "Coffee chair",
+            "Living Room"
+        ],
         "type": "simple",
         "path": "./assets/imgs/products/22-215x260.jpg",
         "price": {
