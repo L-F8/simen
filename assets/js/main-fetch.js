@@ -166,35 +166,33 @@ function renderProductsByCollection(productsCollection) {
         return;
     }
 
-    if (productsCollection.length <= 5) {
-        productByCollection.innerHTML = `
-            <div class="collection-grid">
-                ${products.map(renderCollectionProduct).join("")}
+    const showNavigation = productsCollection.length > 5;
+
+    productByCollection.innerHTML = `
+        <div class="swiper collection-swiper">
+            <div class="swiper-wrapper">
+                ${productsCollection.map(renderCollectionProduct).join("")}
             </div>
-        `;
-    } else {
-        productByCollection.innerHTML = `
-            <div class="swiper collection-swiper">
-                <div class="swiper-wrapper">
-                    ${products.map(renderCollectionProduct).join("")}
-                </div>
+            ${showNavigation ? `
                 <div class="swiper-button-next"></div>
                 <div class="swiper-button-prev"></div>
-            </div>
-        `;
+            ` : ""}
+        </div>
+    `;
 
-        collectionSwiper = new Swiper('.collection-swiper', {
-            slidesPerView: 5,
-            spaceBetween: 20,
-            speed: 600,
-            loop: true,
-            grabCursor: true,
-            navigation: {
+    collectionSwiper = new Swiper('.collection-swiper', {
+        slidesPerView: 5,
+        spaceBetween: 20,
+        speed: 600,
+        loop: showNavigation,
+        grabCursor: true,
+        navigation: showNavigation
+            ? {
                 nextEl: ".swiper-button-next",
                 prevEl: ".swiper-button-prev",
-            },
-        });
-    }
+            }
+            : false,
+    });
 
     handleImageLoading(productByCollection);
 }
