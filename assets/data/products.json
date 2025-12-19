@@ -15,7 +15,8 @@
             "sale": 7
         },
         "rating": 0,
-        "isSale": true
+        "isSale": true,
+        "viewCount": 320
     },
     {
         "id": 2,
@@ -34,7 +35,8 @@
             "sale": null
         },
         "rating": 4,
-        "isSale": false
+        "isSale": false,
+        "viewCount": 540
     },
     {
         "id": 3,
@@ -53,7 +55,8 @@
             "sale": 2
         },
         "rating": 0,
-        "isSale": true
+        "isSale": true,
+        "viewCount": 260
     },
     {
         "id": 4,
@@ -73,7 +76,8 @@
             "sale": null
         },
         "rating": 0,
-        "isSale": false
+        "isSale": false,
+        "viewCount": 180
     },
     {
         "id": 5,
@@ -92,7 +96,8 @@
             "sale": null
         },
         "rating": 0,
-        "isSale": false
+        "isSale": false,
+        "viewCount": 150
     },
     {
         "id": 6,
@@ -111,7 +116,8 @@
             "sale": null
         },
         "rating": 0,
-        "isSale": false
+        "isSale": false,
+        "viewCount": 130
     },
     {
         "id": 7,
@@ -129,7 +135,8 @@
             "sale": null
         },
         "rating": 4,
-        "isSale": false
+        "isSale": false,
+        "viewCount": 410
     },
     {
         "id": 8,
@@ -148,7 +155,8 @@
             "sale": 2
         },
         "rating": 4,
-        "isSale": true
+        "isSale": true,
+        "viewCount": 620
     },
     {
         "id": 9,
@@ -167,7 +175,8 @@
             "sale": 8
         },
         "rating": 4,
-        "isSale": true
+        "isSale": true,
+        "viewCount": 710
     },
     {
         "id": 10,
@@ -187,7 +196,8 @@
             "max": 9
         },
         "rating": 0,
-        "isSale": false
+        "isSale": false,
+        "viewCount": 220
     },
     {
         "id": 11,
@@ -206,7 +216,8 @@
             "sale": null
         },
         "rating": 4,
-        "isSale": false
+        "isSale": false,
+        "viewCount": 480
     },
     {
         "id": 12,
@@ -225,7 +236,8 @@
             "sale": null
         },
         "rating": 4,
-        "isSale": false
+        "isSale": false,
+        "viewCount": 500
     },
     {
         "id": 13,
@@ -244,7 +256,8 @@
             "sale": null
         },
         "rating": 0,
-        "isSale": false
+        "isSale": false,
+        "viewCount": 140
     },
     {
         "id": 14,
@@ -263,7 +276,8 @@
             "sale": null
         },
         "rating": 0,
-        "isSale": false
+        "isSale": false,
+        "viewCount": 120
     },
     {
         "id": 15,
@@ -282,7 +296,8 @@
             "max": 15
         },
         "rating": 4,
-        "isSale": false
+        "isSale": false,
+        "viewCount": 560
     },
     {
         "id": 16,
@@ -299,7 +314,8 @@
             "sale": 12
         },
         "rating": 4,
-        "isSale": true
+        "isSale": true,
+        "viewCount": 610
     },
     {
         "id": 17,
@@ -315,7 +331,8 @@
             "sale": 12
         },
         "rating": 4,
-        "isSale": true
+        "isSale": true,
+        "viewCount": 580
     },
     {
         "id": 18,
@@ -332,7 +349,8 @@
             "sale": null
         },
         "rating": 0,
-        "isSale": false
+        "isSale": false,
+        "viewCount": 160
     },
     {
         "id": 19,
@@ -352,7 +370,8 @@
             "sale": null
         },
         "rating": 4,
-        "isSale": false
+        "isSale": false,
+        "viewCount": 690
     },
     {
         "id": 20,
@@ -371,7 +390,8 @@
             "sale": null
         },
         "rating": 4,
-        "isSale": false
+        "isSale": false,
+        "viewCount": 720
     },
     {
         "id": 21,
@@ -390,7 +410,8 @@
             "sale": null
         },
         "rating": 4,
-        "isSale": false
+        "isSale": false,
+        "viewCount": 750
     },
     {
         "id": 22,
@@ -409,7 +430,8 @@
             "sale": null
         },
         "rating": 4,
-        "isSale": false
+        "isSale": false,
+        "viewCount": 780
     },
     {
         "id": 23,
@@ -428,7 +450,8 @@
             "sale": null
         },
         "rating": 4,
-        "isSale": false
+        "isSale": false,
+        "viewCount": 730
     },
     {
         "id": 24,
@@ -447,7 +470,8 @@
             "max": 45
         },
         "rating": 4,
-        "isSale": true
+        "isSale": true,
+        "viewCount": 820
     },
     {
         "id": 25,
@@ -466,7 +490,8 @@
             "max": 35
         },
         "rating": 4,
-        "isSale": false
+        "isSale": false,
+        "viewCount": 640
     },
     {
         "id": 26,
@@ -485,6 +510,7 @@
             "sale": 54
         },
         "rating": 0,
-        "isSale": true
+        "isSale": true,
+        "viewCount": 390
     }
 ]

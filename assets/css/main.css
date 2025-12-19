@@ -1182,10 +1182,68 @@
 
 
 /* ================== MOST VIEWED ================= */
+.most-viewed-swiper .swiper-slide {
+    display: grid;
+    align-items: unset;
+    height: auto !important;
+}
 
+.most-viewed-swiper .swiper-wrapper {
+    row-gap: 20px;
+}
+
+.most-viewed-items .product-image {
+    max-width: 120px;
+    max-height: 150px;
+    transition: border 0.6s ease-out;
+}
+
+.most-viewed-items .product-image:hover {
+    border: 1px solid var(--text-hover-color);
+}
+
+.most-viewed-items .product-text-group {
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+.most-viewed-items .product-text-group .product-name {
+    text-overflow: ellipsis;
+    white-space: normal;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+}
+
+.most-viewed-items .product-text-group .product-price .product-price__new-price {
+    margin-left: 0;
+}
+
+.most-viewed-items .product-text-group .product-name,
+.most-viewed-items .product-text-group .product-price,
+.most-viewed-items .product-text-group .product-rating {
+    text-align: left;
+}
+
+.most-viewed__add-to-cart {
+    display: block;
+    color: var(--text-color-888);
+    font-size: 12px;
+    text-transform: uppercase;
+    transition: color 0.3s linear;
+}
+
+.most-viewed__add-to-cart:hover {
+    color: var(--text-hover-color);
+}
 
 
 /* ================== LATEST POSTS ================= */
+.latest-post-section {
+    padding-top: unset;
+}
+
 .latest-post__title {
     margin: 15px 0;
     padding-right: 20px;

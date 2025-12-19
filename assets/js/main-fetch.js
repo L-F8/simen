@@ -13,7 +13,7 @@ let products = [];
 let currentIndex = 0;
 const LIMIT = 5;
 
-// Latest, Best Seller, Featured
+// =========== Latest, Best Seller, Featured ===========
 const productWrapper = document.getElementById("product-wrapper");
 const loadMoreBtn = document.getElementById("loadMoreBtn");
 
@@ -146,12 +146,26 @@ function renderPrice(p) {
 };
 
 
-// Suggest Collection
+// ============ Suggest Collection =============
 const collectionItems = document.querySelectorAll('.collection-list__item');
 const productByCollection = document.querySelector('.product-by-collection');
 
 let collectionProducts = [];
 let collectionSwiper = null;
+
+async function fetchCollectionProducts() {
+    collectionProducts = await fetchBase();
+
+    const firstCollection = getCollectionNameFromItem(collectionItems[0]);
+
+    renderProductsByCollection(
+        collectionProducts.filter(p =>
+            normalizeCollections(p).includes(firstCollection)
+        )
+    );
+};
+
+fetchCollectionProducts();
 
 function renderProductsByCollection(productsCollection) {
     productByCollection.innerHTML = "";
@@ -196,20 +210,6 @@ function renderProductsByCollection(productsCollection) {
 
     handleImageLoading(productByCollection);
 }
-
-async function fetchCollectionProducts() {
-    collectionProducts = await fetchBase();
-
-    const firstCollection = getCollectionNameFromItem(collectionItems[0]);
-
-    renderProductsByCollection(
-        collectionProducts.filter(p =>
-            normalizeCollections(p).includes(firstCollection)
-        )
-    );
-};
-
-fetchCollectionProducts();
 
 collectionItems.forEach(item => {
     item.addEventListener('click', (e) => {
@@ -294,6 +294,99 @@ function normalizeCollections(product) {
 };
 
 
+// ========== Most Viewed =========
+const mostViewedWrapper = document.querySelector('.most-viewed-wrapper')
+
+let mostViewedProduct = []
+let viewWrapper = null
+const PAGE_SIZE = 8
+const MAX_ITEMS = 26
+
+async function fetchMostViewedProducts() {
+    mostViewedProduct = await fetchBase()
+
+    renderMostViewedProduct(
+        [...mostViewedProduct]
+            .sort((a, b) => b.viewCount - a.viewCount)
+            .slice(0, MAX_ITEMS)
+    )
+}
+
+fetchMostViewedProducts()
+
+function renderMostViewedProduct(productMostViewed) {
+    mostViewedWrapper.innerHTML = ""
+
+    if (productMostViewed.length === 0) {
+        mostViewedWrapper.innerHTML = `<p>No products found</p>`;
+        return;
+    }
+
+    const showNavigation = productMostViewed.length > 0
+
+    mostViewedWrapper.innerHTML = `
+        <div class="swiper most-viewed-swiper">
+            <div class="swiper-wrapper">
+                ${productMostViewed.map(renderMostViewed).join("")}
+            </div>
+            ${showNavigation ? `
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            ` : ""}
+        </div>
+    `;
+
+    viewWrapper = new Swiper('.most-viewed-swiper', {
+        slidesPerView: 4,
+        spaceBetween: 20,
+        loop: true,
+        speed: 600,
+        grabCursor: true,
+
+        grid: {
+            fill: 'row',
+            rows: 2,
+        },
+
+        navigation: showNavigation
+            ? {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            }
+            : false,
+    })
+
+    handleImageLoading(mostViewedWrapper)
+}
+
+function renderMostViewed(p) {
+    return `
+        <div class="swiper-slide most-viewed-items product-item grid-auto-1fr">
+            <!-- ${p.isSale ? `<span class="on-sale">Sale!</span>` : ""} -->
+            <div class="product-image">
+                <a class="product-image__wrap" href="#">
+                    <img src="${p.path}" alt="${p.name}" />
+                </a>
+            </div>
+            <div class="product-text-group">
+                <a href="#" class="product-name">${p.name}</a>
+                <p class="product-price">${renderPrice(p)}</p>
+                <span class="product-rating">
+                    ${Array.from({ length: 5 })
+            .map((_, i) => `
+                        <i class="fa-${i < p.rating ? "solid" : "regular"} fa-star"></i>
+                        `
+            ).join("")}
+                </span>
+                <a href="#" class="most-viewed__add-to-cart">
+                    <i class="fa-solid fa-shopping-cart"></i>
+                    Add To Cart
+                </a>
+            </div>
+        </div>
+    `;
+}
+
 // Common handle image loading
 function handleImageLoading(wrapper) {
     const images = wrapper.querySelectorAll(".product-image img");
@@ -308,3 +401,4 @@ function handleImageLoading(wrapper) {
         }
     });
 };
+
