@@ -93,3 +93,43 @@ function preventClickOnce(e) {
     e.preventDefault();
     e.stopPropagation();
 }
+
+
+// ----------- For banner image auto slider with pagination -----------
+const transitions = [
+    't-fade', 't-wipe', 't-reveal', 't-cover', 't-split',
+    't-rotate', 't-flip', 't-cube', 't-doors', 't-window',
+    't-blinds', 't-comb', 't-box', 't-gallery', 't-clock',
+    't-bars', 't-switch'
+];
+
+let lastTransition = null;
+const imageSlider = document.querySelector('.image-show');
+
+function getNextTransition() {
+    let next;
+    do {
+        next = transitions[Math.floor(Math.random() * transitions.length)];
+    } while (next === lastTransition);
+    lastTransition = next;
+    return next;
+}
+
+const swiper = new Swiper(imageSlider, {
+    loop: true,
+    speed: 800,
+    autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+    },
+    pagination: {
+        el: '.custom-pagination',
+        clickable: true,
+    },
+    on: {
+        slideChangeTransitionStart() {
+            imageSlider.classList.remove(...transitions);
+            imageSlider.classList.add(getNextTransition());
+        }
+    }
+});

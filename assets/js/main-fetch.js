@@ -11,10 +11,13 @@ const fetchBase = async () => {
 
 let products = [];
 let currentIndex = 0;
+let currentFilter = 'latest';
+let filteredProducts = [];
 const LIMIT = 5;
 
 // =========== Latest, Best Seller, Featured ===========
 const productWrapper = document.getElementById("product-wrapper");
+const productChooseItems = document.querySelectorAll('.product-choose__link');
 const loadMoreBtn = document.getElementById("loadMoreBtn");
 
 async function fetchProducts() {
@@ -29,7 +32,9 @@ function loadMore() {
     setButtonState({ text: "Loading...", disabled: true });
 
     setTimeout(() => {
-        const nextProducts = products.slice(
+        const source = filteredProducts.length ? filteredProducts : products;
+
+        const nextProducts = source.slice(
             currentIndex,
             currentIndex + LIMIT
         );
@@ -44,7 +49,7 @@ function loadMore() {
 
         currentIndex += LIMIT;
 
-        if (currentIndex >= products.length) {
+        if (currentIndex >= source.length) {
             loadMoreBtn.textContent = "All Ready";
             loadMoreBtn.classList.add("is-done");
             loadMoreBtn.disabled = true;
@@ -112,6 +117,57 @@ function renderProduct(p, index) {
     `;
 };
 
+productChooseItems.forEach(item => {
+    item.addEventListener('click', (e) => {
+        e.preventDefault();
+
+        productChooseItems.forEach(i => {
+            i.classList.remove('active')
+        })
+        item.classList.add('active');
+
+        currentFilter = item.dataset.type;
+
+        currentIndex = 0;
+        productWrapper.innerHTML = "";
+        filteredProducts = getProductsByType(currentFilter);
+
+        loadMoreBtn.classList.remove("is-done");
+        loadMoreBtn.disabled = false;
+        loadMoreBtn.textContent = "Load More Items";
+
+        loadMore();
+    })
+})
+
+const cached = {
+    latest: [],
+    best: [],
+    featured: []
+};
+
+function getProductsByType(type) {
+    if (cached[type]?.length) return cached[type];
+    let result;
+
+    switch (type) {
+        case "latest":
+            result = [...products].sort((a, b) => b.id - a.id);
+            break;
+        case "best":
+            result = [...products].sort((a, b) => b.viewCount - a.viewCount);
+            break;
+        case "featured":
+            result = products.filter(p => p.rating >= 4);
+            break;
+        default:
+            result = products;
+    }
+
+    cached[type] = result;
+    return result;
+}
+
 // Handle render price
 function renderPrice(p) {
     const price = p.price
@@ -126,7 +182,7 @@ function renderPrice(p) {
     }
 
     // SIMPLE / EXTERNAL PRODUCT - CÓ SALE
-    if (price.sale && price.sale < price.regular) {
+    if (price.sale != null && price.sale < price.regular) {
         return `
             <span class="product-price__old-price">
                 $${price.regular.toFixed(2)}

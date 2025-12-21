@@ -229,16 +229,22 @@
         <!-- Banner section 1 -->
         <div class="padding-0-15">
           <div class="content-box image-show-section">
-            <div class="image-show flex-col-2">
-              <div class="image-slide">
-                <img class="slide" src="./assets/imgs/01.png" alt="" />
+            <div class="image-show flex-col-2 swiper">
+              <div class="swiper-wrapper">
+                <div class="image-slide swiper-slide">
+                  <img class="slide" src="./assets/imgs/01.png" alt="" />
+                </div>
+                <div class="image-slide swiper-slide">
+                  <img class="slide" src="./assets/imgs/2.png" alt="" />
+                </div>
+                <div class="image-slide swiper-slide">
+                  <img class="slide" src="./assets/imgs/01.png" alt="" />
+                </div>
+                <div class="image-slide swiper-slide">
+                  <img class="slide" src="./assets/imgs/3.png" alt="" />
+                </div>
               </div>
-              <div class="dot-choosen">
-                <span data-index="0" data-effect="slide" class="dot"></span>
-                <span data-index="1" data-effect="fade" class="dot"></span>
-                <span data-index="2" data-effect="wipe" class="dot"></span>
-                <span data-index="3" data-effect="clip" class="dot"></span>
-              </div>
+              <div class="swiper-pagination custom-pagination"></div>
             </div>
             <div class="image-layout-animation flex-col-2">
               <div class="image-animation__first">
@@ -268,17 +274,25 @@
             <div class="product-choose grid-auto-1fr">
               <ul>
                 <li>
-                  <a href="#" class="product-choose__link active latest">
+                  <a
+                    href="#"
+                    class="product-choose__link active latest"
+                    data-type="latest"
+                  >
                     <span>Latest</span>
                   </a>
                 </li>
                 <li class="best-seller">
-                  <a href="#" class="product-choose__link">
+                  <a
+                    href="#"
+                    class="product-choose__link"
+                    data-type="best-seller"
+                  >
                     <span>Best Seller</span>
                   </a>
                 </li>
                 <li>
-                  <a href="#" class="product-choose__link">
+                  <a href="#" class="product-choose__link" data-type="featured">
                     <span>Featured</span>
                   </a>
                 </li>
@@ -833,6 +847,7 @@
     <!-- main-fetch.js: Process fetch data from .json file -->
     <script src="./assets/js/main-fetch.js"></script>
 
+    <!-- swiperEvent.js: Process Swiper events for banner, auto slider, carousels, swiper showing -->
     <script src="./assets/js/swiperEvent.js"></script>
   </body>
 </html>
