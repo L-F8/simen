@@ -55,10 +55,10 @@ const blogsSwiper = new Swiper(".blogs-swiper", {
 
     breakpoints: {
         0: {
-            slidesPerView: 2,
+            slidesPerView: 1,
         },
         576: {
-            slidesPerView: 2,
+            slidesPerView: 1,
         },
         768: {
             slidesPerView: 2,
@@ -72,13 +72,13 @@ const blogsSwiper = new Swiper(".blogs-swiper", {
         1400: {
             slidesPerView: 3,
         },
-    }
+    },
 })
 
 
 // Brand slider - Su dung Swiper.js
 const brandSwiper = new Swiper('.brand-swiper', {
-    slidesPerView: 5,
+    slidesPerView: 6,
     spaceBetween: 0,
 
     loop: true,
@@ -93,22 +93,25 @@ const brandSwiper = new Swiper('.brand-swiper', {
 
     breakpoints: {
         0: {
-            slidesPerView: 4,
+            slidesPerView: 1,
         },
         576: {
-            slidesPerView: 4,
+            slidesPerView: 1,
         },
         768: {
             slidesPerView: 4,
         },
         992: {
+            slidesPerView: 6,
+        },
+        1114: {
             slidesPerView: 5,
         },
         1200: {
-            slidesPerView: 5,
+            slidesPerView: 6,
         },
         1400: {
-            slidesPerView: 5,
+            slidesPerView: 6,
         },
     },
 });

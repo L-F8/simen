@@ -2,14 +2,147 @@
 @media (max-width: 575.98px) {}
 
 /* Small devices (landscape phones, less than 768px) */
-@media (max-width: 767.98px) {}
+@media (max-width: 767.98px) {
+    .padding-0-15 {
+        padding: 0;
+    }
 
-/* Medium devices (tablets, less than 992px) */
-@media (max-width: 991.98px) {
+    .menu-bottom__wrapper {
+        margin: 0;
+    }
+
+    .menu-center .common-flex {
+        flex-direction: column;
+    }
+
+    .image-show-section {
+        flex-wrap: wrap;
+    }
+
+    .image-show {
+        width: 100%;
+    }
+
+    .image-layout-animation.flex-col-2 {
+        width: unset;
+    }
+
+    .image-animation__second {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .sofa-italia,
+    .discount-15-percent {
+        width: 100%;
+    }
+
+    .product-choose {
+        margin-bottom: 16px;
+    }
+
+    .product-wrapper {
+        display: unset;
+    }
+
+    .buy-now-group.grid-col-2-auto {
+        grid-template-columns: unset;
+    }
+
+    .buy-now-col__img img {
+        max-width: 350px !important;
+    }
+
+    .buy-now-col:last-child {
+        margin-left: 0 !important;
+        padding-left: 28px !important;
+        padding-bottom: 80px !important;
+    }
+
+    .buy-now-col h2 {
+        font-size: 48px;
+    }
+
+    .banner-section-2 {
+        grid-template-columns: unset;
+        margin: unset !important;
+    }
+
+    .banner-section-2__left,
+    .banner-section-2__center,
+    .banner-section-2__right {
+        height: 100% !important;
+    }
+
+    .most-viewed-items .product-image {
+        max-width: 130px !important;
+        max-height: 160px !important;
+    }
+
+    .most-viewed-swiper .swiper-wrapper {
+        row-gap: 0px;
+    }
+
+    .most-viewed-items .product-text-group {
+        padding-left: 20px;
+    }
+
+    .suggest-collection__title,
+    .latest-post__title {
+        font-size: 16px;
+    }
+
+    .first-footer {
+        padding: 20px 0;
+    }
+
+    .footer-wrapper {
+        display: unset;
+    }
+
+    .footer-group {
+        margin-bottom: 40px;
+    }
+
+    .second-footer {
+        text-align: center;
+        margin: 0 -20px;
+    }
+
+    .menu-center__wrap-text {
+        width: 100%;
+        padding: 25px 0 !important;
+    }
+
+    .menu-center__logo {
+        max-width: 150px;
+    }
+
+    .menu-bottom__navbar {
+        gap: 0;
+    }
+
+    .menu-bottom__cart::before {
+        left: -15px;
+    }
+}
+
+/* Galaxy Fold2 */
+@media (width: 884px) {
     .padding-0-15 {
         padding: 0 60px;
     }
 
+    .menu-bottom__wrapper {
+        margin: 0 60px;
+    }
+
+    .menu-center__logo {}
+
+}
+
+/* Medium devices (tablets, less than 992px) */
+@media (max-width: 991.98px) {
     .grid-md-col-2 {
         grid-template-columns: repeat(2, 1fr);
     }
@@ -43,9 +176,7 @@
     }
 
     .menu-center__logo {
-        width: 200px;
         padding-right: 0;
-        padding-bottom: 10px;
     }
 
     .menu-center__grid-group {
@@ -53,12 +184,19 @@
         justify-content: center;
     }
 
-    .menu-center__grid-group .menu-center__grid-group-text {
-        display: none;
+    .menu-center__grid-group {
+        padding: 0;
     }
 
-    .menu-bottom__wrapper {
-        margin: 0 60px;
+    .menu-center__wrap-text {
+        padding-bottom: 25px;
+        padding-left: 15px;
+    }
+
+    .menu-center__logo {}
+
+    .menu-center__grid-group .menu-center__grid-group-text {
+        display: none;
     }
 
     .menu-bottom__list {
@@ -119,11 +257,34 @@
     .second-footer {
         flex-direction: column-reverse;
         padding: 20px 0;
-        /* padding-bottom: 16px; */
     }
 
     .second-footer p {
         margin: 10px 0;
+    }
+}
+
+@media (width: 1114px) {
+    .padding-0-15 {
+        padding: 0 60px;
+    }
+
+    .mobile-bar-icon {
+        display: block;
+    }
+
+    .menu-bottom__wrapper {
+        margin: 0 60px;
+    }
+
+    .menu-center__logo {}
+
+    .menu-bottom__list {
+        display: none;
+    }
+
+    .menu-center__wrap-text {
+        padding-left: 20px;
     }
 }
 

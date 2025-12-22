@@ -271,10 +271,10 @@ function renderProductsByCollection(productsCollection) {
 
         breakpoints: {
             0: {
-                slidesPerView: 2,
+                slidesPerView: 1,
             },
             576: {
-                slidesPerView: 2,
+                slidesPerView: 1,
             },
             768: {
                 slidesPerView: 4,
@@ -439,14 +439,14 @@ function renderMostViewedProduct(productMostViewed) {
 
         breakpoints: {
             0: {
-                slidesPerView: 2,
+                slidesPerView: 1,
                 grid: {
                     fill: 'row',
                     rows: 2,
                 },
             },
             576: {
-                slidesPerView: 2,
+                slidesPerView: 1,
                 grid: {
                     fill: 'row',
                     rows: 2,
