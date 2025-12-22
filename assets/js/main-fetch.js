@@ -253,15 +253,42 @@ function renderProductsByCollection(productsCollection) {
     collectionSwiper = new Swiper('.collection-swiper', {
         slidesPerView: 5,
         spaceBetween: 20,
+
         speed: 600,
         loop: showNavigation,
+
+        autoplay: false,
         grabCursor: true,
+        allowTouchMove: true,
+        grabCursor: true,
+
         navigation: showNavigation
             ? {
                 nextEl: ".swiper-button-next",
                 prevEl: ".swiper-button-prev",
             }
             : false,
+
+        breakpoints: {
+            0: {
+                slidesPerView: 2,
+            },
+            576: {
+                slidesPerView: 2,
+            },
+            768: {
+                slidesPerView: 4,
+            },
+            992: {
+                slidesPerView: 5,
+            },
+            1200: {
+                slidesPerView: 5,
+            },
+            1400: {
+                slidesPerView: 5,
+            },
+        }
     });
 
     handleImageLoading(productByCollection);
@@ -395,14 +422,13 @@ function renderMostViewedProduct(productMostViewed) {
     viewWrapper = new Swiper('.most-viewed-swiper', {
         slidesPerView: 4,
         spaceBetween: 20,
+
         loop: true,
         speed: 600,
-        grabCursor: true,
 
-        grid: {
-            fill: 'row',
-            rows: 2,
-        },
+        autoplay: false,
+        allowTouchMove: true,
+        grabCursor: true,
 
         navigation: showNavigation
             ? {
@@ -410,6 +436,51 @@ function renderMostViewedProduct(productMostViewed) {
                 prevEl: ".swiper-button-prev",
             }
             : false,
+
+        breakpoints: {
+            0: {
+                slidesPerView: 2,
+                grid: {
+                    fill: 'row',
+                    rows: 2,
+                },
+            },
+            576: {
+                slidesPerView: 2,
+                grid: {
+                    fill: 'row',
+                    rows: 2,
+                },
+            },
+            768: {
+                slidesPerView: 3,
+                grid: {
+                    fill: 'row',
+                    rows: 2,
+                },
+            },
+            992: {
+                slidesPerView: 4,
+                grid: {
+                    fill: 'row',
+                    rows: 2,
+                },
+            },
+            1200: {
+                slidesPerView: 4,
+                grid: {
+                    fill: 'row',
+                    rows: 2,
+                },
+            },
+            1400: {
+                slidesPerView: 4,
+                grid: {
+                    fill: 'row',
+                    rows: 2,
+                },
+            },
+        }
     })
 
     handleImageLoading(mostViewedWrapper)

@@ -26,6 +26,16 @@ menuBottomCart.addEventListener('mouseleave', () => {
 })
 
 
+const quickAccess = document.querySelector('.quick-access')
+const quickAccessDropdown = quickAccess.querySelector('.transition-default')
+quickAccess.addEventListener('mouseenter', () => {
+    quickAccessDropdown.classList.add('transition-hover')
+})
+quickAccess.addEventListener('mouseleave', () => {
+    quickAccessDropdown.classList.remove('transition-hover')
+})
+
+
 // Xu ly khi load trang thi se hien overlay
 document.addEventListener('DOMContentLoaded', () => {
     document.querySelector('.overlay')?.classList.add('active')
@@ -95,4 +105,88 @@ hiddenSearch.addEventListener('mouseleave', closeSearch)
 iconSearch.addEventListener('mouseleave', (e) => {
     if (hiddenSearch.contains(e.relatedTarget)) return
     closeSearch()
+})
+
+
+
+// Process in sidebar menu on mobile, tablet
+const sidebar = document.querySelector('.menu-bottom__sidebar');
+const menuRoot = document.querySelector('.sidebar-menu');
+
+menuRoot.addEventListener('click', (e) => {
+    const btn = e.target.closest('.btn_accor');
+    if (!btn) return;
+
+    const header = btn.closest('.accr_header');
+    const content = header.nextElementSibling;
+    if (!content || !content.classList.contains('accr_content')) return;
+
+    const parentUL = header.closest('ul');
+    const isOpening = !content.classList.contains('open');
+
+    // 👉 đóng các submenu cùng cấp
+    parentUL.querySelectorAll(':scope > li > .accr_content.open')
+        .forEach(el => {
+            if (el !== content) closeSubmenu(el);
+        });
+
+    // 👉 toggle submenu hiện tại
+    isOpening ? openSubmenu(content) : closeSubmenu(content);
+
+    // 👉 toggle icon
+    const icon = btn.querySelector('i');
+    icon.classList.toggle('fa-plus-circle', !isOpening);
+    icon.classList.toggle('fa-minus-circle', isOpening);
+
+    // 👉 xử lý scroll CHỈ KHI mở menu cấp 3+
+    handleSidebarScroll();
+});
+
+function openSubmenu(el) {
+    el.classList.add('open');
+    el.style.height = el.scrollHeight + 'px';
+
+    el.addEventListener('transitionend', function handler() {
+        el.style.height = 'auto';
+        el.removeEventListener('transitionend', handler);
+        handleSidebarScroll();
+    });
+}
+
+function closeSubmenu(el) {
+    el.style.height = el.scrollHeight + 'px';
+    requestAnimationFrame(() => {
+        el.style.height = '0px';
+        el.classList.remove('open');
+        handleSidebarScroll();
+    });
+
+    const icon = el.previousElementSibling?.querySelector('i');
+    icon?.classList.add('fa-plus-circle');
+    icon?.classList.remove('fa-minus-circle');
+}
+
+function handleSidebarScroll() {
+    requestAnimationFrame(() => {
+        if (sidebar.scrollHeight > sidebar.clientHeight) {
+            sidebar.classList.add('has-scroll');
+        } else {
+            sidebar.classList.remove('has-scroll');
+        }
+    });
+}
+
+
+// Open/Close sidebar menu on mobile, tablet
+const barOpenMenu = document.querySelector('.mobile-bar__open-sidebar');
+const overlaySidebar = document.querySelector('.menu-bottom__overlay');
+
+barOpenMenu.addEventListener('click', () => {
+    sidebar.classList.add('open');
+    overlaySidebar.classList.add('open');
+})
+
+overlaySidebar.addEventListener('click', () => {
+    sidebar.classList.remove('open');
+    overlaySidebar.classList.remove('open');
 })

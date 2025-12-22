@@ -39,14 +39,15 @@
 }
 
 .select-group__language,
-.select-group__currency {
+.select-group__currency,
+.quick-access--dropdown {
     position: absolute;
     top: calc(100% + var(--menu-top-padding) + 1px);
     min-width: max-content;
     background: var(--bg-color);
     border-radius: 2px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
-    z-index: 1;
+    z-index: 999;
 }
 
 .select-group__language {
@@ -482,8 +483,7 @@
 .custom-pagination .swiper-pagination-bullet {
     width: 12px;
     height: 12px;
-    border-radius: 0;
-    /* vuông */
+    border-radius: 50%;
     background: #d0d0d0;
     opacity: 1;
     margin: 0 6px !important;
@@ -1354,43 +1354,18 @@
 
 .brand-swiper {
     overflow: hidden;
-    cursor: grab;
 }
 
-.brand-swiper.dragging {
-    cursor: grabbing;
-}
+.brand-item {}
 
-.brand-wrapper {
-    display: flex;
-    will-change: transform;
-    cursor: pointer;
-}
-
-.brand-item {
-    flex: 0 0 calc(100% / 6);
-    padding: 10px;
-}
-
-.brand-swiper a,
-.brand-swiper img {
-    user-select: none;
-    -webkit-user-drag: none;
-}
-
-.brand-item a {
-    display: block;
-    cursor: inherit;
-}
-
-.brand-item a img {
+.brand-item img {
     width: 100%;
     object-fit: contain;
     user-select: none;
     -webkit-user-drag: none;
 }
 
-.brand-item a img:hover {
+.brand-item img:hover {
     background-color: #f5f5f5;
 }
 
@@ -1597,4 +1572,111 @@
 .overlay__subcribe-btn:hover {
     background-color: var(--text-hover-color);
     color: var(--bg-color);
+}
+
+
+
+/* ----------- Sidebar and overlay on medium screen --------- */
+.menu-bottom__sidebar,
+.menu-bottom__overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 999;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.35s ease-in-out;
+}
+
+.menu-bottom__overlay {
+    background: #000;
+    opacity: 0.2;
+}
+
+.menu-bottom__sidebar {
+    background: #222;
+    color: #999;
+    padding: 15px;
+    top: 0;
+    width: 250px;
+    height: 100%;
+    transform: translateX(-100%);
+}
+
+.menu-bottom__sidebar.open {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0);
+}
+
+.menu-bottom__overlay.open {
+    opacity: 0.2;
+    visibility: visible;
+}
+
+
+
+/* ------------ Menu sidebar on medium screen ------------ */
+.menu-bottom__sidebar {
+    overflow-y: hidden;
+    height: 100vh;
+}
+
+.menu-bottom__sidebar.has-scroll {
+    overflow-y: auto;
+}
+
+.sidebar-menu {
+    padding-bottom: 20px;
+}
+
+.menu-item {
+    font-size: 12px;
+    display: list-item;
+}
+
+.menu-item.has-children {}
+
+.accr_header {
+    position: relative;
+    border-bottom: 1px solid #393939;
+    line-height: 40px;
+}
+
+.accr_header a {
+    color: #999;
+    transition: all 0.25s ease 0s;
+}
+
+.accr_header a:hover {
+    color: #fff;
+}
+
+.accr_header .btn_accor {
+    font-size: 14px;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+.accr_header .btn_accor i {
+    color: inherit;
+    transition: all 0.25s ease 0s;
+}
+
+.accr_header .btn_accor:hover i {
+    color: #fff;
+}
+
+.accr_content {
+    padding-left: 15px;
+    height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: height 0.35s ease, opacity 0.25s ease;
+}
+
+.accr_content.open {
+    opacity: 1;
 }

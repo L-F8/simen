@@ -38,6 +38,7 @@
     />
     <link rel="stylesheet" href="./assets/css/base.css" />
     <link rel="stylesheet" href="./assets/css/main.css" />
+    <link rel="stylesheet" href="./assets/css/responsive.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.css"
@@ -112,6 +113,37 @@
                 </a>
               </li>
             </ul>
+            <div class="quick-access">
+              <i class="fa-solid fa-anchor"></i>
+              <div class="quick-access--dropdown transition-default">
+                <ul>
+                  <li>
+                    <a href="#">
+                      <i class="fa-solid fa-user icon"></i>
+                      <span class="text">My Account</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <i class="fa-regular fa-heart icon"></i>
+                      <span class="text">Wishlist</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <i class="fa-regular fa-square-check icon"></i>
+                      <span class="text">Checkout</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="./pages/login.html">
+                      <i class="fa-solid fa-key icon"></i>
+                      <span class="text">Login</span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -165,6 +197,10 @@
         <div class="container">
           <div class="menu-bottom__wrapper">
             <div class="menu-bottom__navbar grid">
+              <div class="mobile-bar-icon mobile-bar__open-sidebar">
+                <i class="fa-solid fa-bars"></i>
+              </div>
+
               <ul class="menu-bottom__list">
                 <li class="menu-bottom__item">
                   <a href="#" class="menu-bottom__item-link active">Home</a>
@@ -223,6 +259,638 @@
       </div>
     </header>
 
+    <div class="menu-bottom__overlay"></div>
+    <div class="menu-bottom__sidebar">
+      <!-- Menu cap 1 -->
+      <ul class="sidebar-menu">
+        <li class="menu-item has-children">
+          <div class="accr_header">
+            <a href="#">Home</a>
+            <span class="btn_accor">
+              <i class="fa-solid fa-plus-circle"></i>
+            </span>
+          </div>
+          <div class="accr_content">
+            <ul class="submenu">
+              <li class="menu-item">
+                <div class="accr_header">
+                  <a href="#">Home Page 1</a>
+                </div>
+              </li>
+              <li class="menu-item">
+                <div class="accr_header">
+                  <a href="#">Home Page 2</a>
+                </div>
+              </li>
+              <li class="menu-item">
+                <div class="accr_header">
+                  <a href="#">Home Page 3</a>
+                </div>
+              </li>
+              <li class="menu-item">
+                <div class="accr_header">
+                  <a href="#">Home Page 4</a>
+                </div>
+              </li>
+              <li class="menu-item">
+                <div class="accr_header">
+                  <a href="#">Home Page 5</a>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </li>
+
+        <li class="menu-item has-children">
+          <div class="accr_header">
+            <a href="#">Furniture</a>
+            <span class="btn_accor">
+              <i class="fa-solid fa-plus-circle"></i>
+            </span>
+          </div>
+          <div class="accr_content">
+            <!-- Menu cap 2 -->
+            <ul class="submenu">
+              <li class="menu-item">
+                <div class="accr_header">
+                  <a href="#">Table 1</a>
+                  <span class="btn_accor">
+                    <i class="fa-solid fa-plus-circle"></i>
+                  </span>
+                </div>
+                <div class="accr_content">
+                  <!-- Menu cap 3 -->
+                  <ul class="submenu">
+                    <li class="menu-item">
+                      <div class="accr_header">
+                        <a href="#">Kitchen & Dining Room</a>
+                      </div>
+                    </li>
+                    <li class="menu-item">
+                      <div class="accr_header">
+                        <a href="#">Tables</a>
+                      </div>
+                    </li>
+                    <li class="menu-item">
+                      <div class="accr_header">
+                        <a href="#">Folding Table</a>
+                      </div>
+                    </li>
+                    <li class="menu-item">
+                      <div class="accr_header">
+                        <a href="#">Living Room Tables</a>
+                      </div>
+                    </li>
+                    <li class="menu-item">
+                      <div class="accr_header">
+                        <a href="#">Sofa Tables</a>
+                      </div>
+                    </li>
+                    <li class="menu-item">
+                      <div class="accr_header">
+                        <a href="#">End Tables</a>
+                      </div>
+                    </li>
+                    <li class="menu-item">
+                      <div class="accr_header">
+                        <a href="#">Coffee Tables</a>
+                      </div>
+                    </li>
+                    <li class="menu-item">
+                      <div class="accr_header">
+                        <a href="#">Pedestal Tables</a>
+                      </div>
+                    </li>
+                    <li class="menu-item">
+                      <div class="accr_header">
+                        <a href="#">Home Office Desks</a>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li class="menu-item">
+                <div class="accr_header">
+                  <a href="#">Table 2</a>
+                  <span class="btn_accor">
+                    <i class="fa-solid fa-plus-circle"></i>
+                  </span>
+                </div>
+                <div class="accr_content">
+                  <ul class="submenu">
+                    <li class="menu-item">
+                      <div class="accr_header">
+                        <a href="#">Living Room Tables</a>
+                      </div>
+                    </li>
+                    <li class="menu-item">
+                      <div class="accr_header">
+                        <a href="#">Sofa Tables</a>
+                      </div>
+                    </li>
+                    <li class="menu-item">
+                      <div class="accr_header">
+                        <a href="#">End Tables</a>
+                      </div>
+                    </li>
+                    <li class="menu-item">
+                      <div class="accr_header">
+                        <a href="#">Coffee Tables</a>
+                      </div>
+                    </li>
+                    <li class="menu-item">
+                      <div class="accr_header">
+                        <a href="#">Pedestal Tables</a>
+                      </div>
+                    </li>
+                    <li class="menu-item">
+                      <div class="accr_header">
+                        <a href="#">Home Office Desks</a>
+                      </div>
+                    </li>
+                    <li class="menu-item">
+                      <div class="accr_header">
+                        <a href="#">Kids Furniture</a>
+                      </div>
+                    </li>
+                    <li class="menu-item">
+                      <div class="accr_header">
+                        <a href="#">Kitchen & Dinning Room Sets</a>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li class="menu-item">
+                <div class="accr_header">
+                  <a href="#">Table 3</a>
+                  <span class="btn_accor">
+                    <i class="fa-solid fa-plus-circle"></i>
+                  </span>
+                </div>
+                <div class="accr_content">
+                  <ul class="submenu">
+                    <li class="menu-item">
+                      <div class="accr_header">
+                        <a href="#">Kitchen & Dining Room</a>
+                      </div>
+                    </li>
+                    <li class="menu-item">
+                      <div class="accr_header">
+                        <a href="#">Tables</a>
+                      </div>
+                    </li>
+                    <li class="menu-item">
+                      <div class="accr_header">
+                        <a href="#">Folding Tables</a>
+                      </div>
+                    </li>
+                    <li class="menu-item">
+                      <div class="accr_header">
+                        <a href="#">End Tables</a>
+                      </div>
+                    </li>
+                    <li class="menu-item">
+                      <div class="accr_header">
+                        <a href="#">Coffee Tables</a>
+                      </div>
+                    </li>
+                    <li class="menu-item">
+                      <div class="accr_header">
+                        <a href="#">PedestalTables</a>
+                      </div>
+                    </li>
+                    <li class="menu-item">
+                      <div class="accr_header">
+                        <a href="#">Home Office Desks</a>
+                      </div>
+                    </li>
+                    <li class="menu-item">
+                      <div class="accr_header">
+                        <a href="#">Kids’Furniture</a>
+                      </div>
+                    </li>
+                    <li class="menu-item">
+                      <div class="accr_header">
+                        <a href="#">Kitchen & Dinning Room Sets</a>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li class="menu-item">
+                <div class="accr_header">
+                  <a href="#">Table 4</a>
+                  <span class="btn_accor">
+                    <i class="fa-solid fa-plus-circle"></i>
+                  </span>
+                </div>
+                <div class="accr_content">
+                  <ul class="submenu">
+                    <li class="menu-item">
+                      <div class="accr_header">
+                        <a href="#">Dining Room Tables</a>
+                      </div>
+                    </li>
+                    <li class="menu-item">
+                      <div class="accr_header">
+                        <a href="#">Folding Tables</a>
+                      </div>
+                    </li>
+                    <li class="menu-item">
+                      <div class="accr_header">
+                        <a href="#">Living Room Tables</a>
+                      </div>
+                    </li>
+                    <li class="menu-item">
+                      <div class="accr_header">
+                        <a href="#">Sofa Tables</a>
+                      </div>
+                    </li>
+                    <li class="menu-item">
+                      <div class="accr_header">
+                        <a href="#">End Tables</a>
+                      </div>
+                    </li>
+                    <li class="menu-item">
+                      <div class="accr_header">
+                        <a href="#">Coffee Tables</a>
+                      </div>
+                    </li>
+                    <li class="menu-item">
+                      <div class="accr_header">
+                        <a href="#">Pedestal Tables</a>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </li>
+
+        <!-- NO SUBMENU -->
+        <li class="menu-item">
+          <div class="accr_header">
+            <a href="#">Coffee Tables</a>
+          </div>
+        </li>
+
+        <!-- NO SUBMENU -->
+        <li class="menu-item">
+          <div class="accr_header">
+            <a href="#">Sofas</a>
+          </div>
+        </li>
+
+        <li class="menu-item has-children">
+          <div class="accr_header">
+            <a href="#">Bedroom furniture</a>
+            <span class="btn_accor">
+              <i class="fa-solid fa-plus-circle"></i>
+            </span>
+          </div>
+          <div class="accr_content">
+            <ul class="submenu">
+              <li class="menu-item">
+                <div class="accr_header">
+                  <a href="#">Sofa</a>
+                </div>
+              </li>
+              <li class="menu-item">
+                <div class="accr_header">
+                  <a href="#">Chair </a>
+                </div>
+              </li>
+              <li class="menu-item">
+                <div class="accr_header">
+                  <a href="#">Bed</a>
+                </div>
+              </li>
+              <li class="menu-item">
+                <div class="accr_header">
+                  <a href="#">Furniture chest</a>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </li>
+
+        <li class="menu-item has-children">
+          <div class="accr_header">
+            <a href="#">Shop</a>
+            <span class="btn_accor">
+              <i class="fa-solid fa-plus-circle"></i>
+            </span>
+          </div>
+          <div class="accr_content">
+            <ul class="submenu">
+              <li class="menu-item">
+                <div class="accr_header">
+                  <a href="#">Product Types</a>
+                  <span class="btn_accor">
+                    <i class="fa-solid fa-plus-circle"></i>
+                  </span>
+                </div>
+                <div class="accr_content">
+                  <ul class="submenu">
+                    <li class="menu-item">
+                      <div class="accr_header">
+                        <a href="#">Simple Proudct</a>
+                      </div>
+                    </li>
+                    <li class="menu-item">
+                      <div class="accr_header">
+                        <a href="#">Grouped Prouduct</a>
+                      </div>
+                    </li>
+                    <li class="menu-item">
+                      <div class="accr_header">
+                        <a href="#">Variable Product</a>
+                      </div>
+                    </li>
+                    <li class="menu-item">
+                      <div class="accr_header">
+                        <a href="#">Variable Product – Color</a>
+                      </div>
+                    </li>
+                    <li class="menu-item">
+                      <div class="accr_header">
+                        <a href="#">Variable Product – Image</a>
+                      </div>
+                    </li>
+                    <li class="menu-item">
+                      <div class="accr_header">
+                        <a href="#">External/Affiliate Product</a>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li class="menu-item">
+                <div class="accr_header">
+                  <a href="#">Shop Pages</a>
+                  <span class="btn_accor">
+                    <i class="fa-solid fa-plus-circle"></i>
+                  </span>
+                </div>
+                <div class="accr_content">
+                  <ul class="submenu">
+                    <li class="menu-item">
+                      <div class="accr_header">
+                        <a href="#">Shopping Cart</a>
+                      </div>
+                    </li>
+                    <li class="menu-item">
+                      <div class="accr_header">
+                        <a href="#">Checkout</a>
+                      </div>
+                    </li>
+                    <li class="menu-item">
+                      <div class="accr_header">
+                        <a href="#">My Account</a>
+                      </div>
+                    </li>
+                    <li class="menu-item">
+                      <div class="accr_header">
+                        <a href="#">Wishlist</a>
+                      </div>
+                    </li>
+                    <li class="menu-item">
+                      <div class="accr_header">
+                        <a href="#">404</a>
+                      </div>
+                    </li>
+                    <li class="menu-item">
+                      <div class="accr_header">
+                        <a href="#">Product Tag</a>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li class="menu-item">
+                <div class="accr_header">
+                  <a href="#">Shop Shortcodes</a>
+                  <span class="btn_accor">
+                    <i class="fa-solid fa-plus-circle"></i>
+                  </span>
+                </div>
+                <div class="accr_content">
+                  <ul class="submenu">
+                    <li class="menu-item">
+                      <div class="accr_header">
+                        <a href="#">SNS Featured Categories</a>
+                      </div>
+                    </li>
+                    <li class="menu-item">
+                      <div class="accr_header">
+                        <a href="#">SNS Product Tabs</a>
+                      </div>
+                    </li>
+                    <li class="menu-item">
+                      <div class="accr_header">
+                        <a href="#">SNS Products</a>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </li>
+
+        <li class="menu-item has-children">
+          <div class="accr_header">
+            <a href="#">Blog</a>
+            <span class="btn_accor">
+              <i class="fa-solid fa-plus-circle"></i>
+            </span>
+          </div>
+          <div class="accr_content">
+            <ul class="submenu">
+              <li class="menu-item">
+                <div class="accr_header">
+                  <a href="#">Blog FullWidth</a>
+                </div>
+              </li>
+              <li class="menu-item">
+                <div class="accr_header">
+                  <a href="#">Blog FullWidth 2 Columns</a>
+                </div>
+              </li>
+              <li class="menu-item">
+                <div class="accr_header">
+                  <a href="#">Blog FullWidth 3 Columns</a>
+                </div>
+              </li>
+              <li class="menu-item">
+                <div class="accr_header">
+                  <a href="#">Blog Masonry</a>
+                </div>
+              </li>
+              <li class="menu-item">
+                <div class="accr_header">
+                  <a href="#">Blog Left Sidebar</a>
+                </div>
+              </li>
+              <li class="menu-item">
+                <div class="accr_header">
+                  <a href="#">Blog Right Sidebar</a>
+                </div>
+              </li>
+              <li class="menu-item">
+                <div class="accr_header">
+                  <a href="#">Single Post</a>
+                  <span class="btn_accor">
+                    <i class="fa-solid fa-plus-circle"></i>
+                  </span>
+                </div>
+                <div class="accr_content">
+                  <ul class="submenu">
+                    <li class="menu-item">
+                      <div class="accr_header">
+                        <a href="#">Standard Post</a>
+                      </div>
+                    </li>
+                    <li class="menu-item">
+                      <div class="accr_header">
+                        <a href="#">Post Format – Gallery</a>
+                      </div>
+                    </li>
+                    <li class="menu-item">
+                      <div class="accr_header">
+                        <a href="#">Post Format – Quote</a>
+                      </div>
+                    </li>
+                    <li class="menu-item">
+                      <div class="accr_header">
+                        <a href="#">Post Format – Video</a>
+                      </div>
+                    </li>
+                    <li class="menu-item">
+                      <div class="accr_header">
+                        <a href="#">Post Format – Link</a>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </li>
+
+        <li class="menu-item has-children">
+          <div class="accr_header">
+            <a href="#">Shortcodes</a>
+            <span class="btn_accor">
+              <i class="fa-solid fa-plus-circle"></i>
+            </span>
+          </div>
+          <div class="accr_content">
+            <ul class="submenu">
+              <li class="menu-item">
+                <div class="accr_header">
+                  <a href="#">Shortcodes</a>
+                  <span class="btn_accor">
+                    <i class="fa-solid fa-plus-circle"></i>
+                  </span>
+                </div>
+                <div class="accr_content">
+                  <ul class="submenu">
+                    <li class="menu-item">
+                      <div class="accr_header">
+                        <a href="#">Accordions</a>
+                      </div>
+                    </li>
+                    <li class="menu-item">
+                      <div class="accr_header">
+                        <a href="#">Custom Heading</a>
+                      </div>
+                    </li>
+                    <li class="menu-item">
+                      <div class="accr_header">
+                        <a href="#">Messages</a>
+                      </div>
+                    </li>
+                    <li class="menu-item">
+                      <div class="accr_header">
+                        <a href="#">Progress Bar</a>
+                      </div>
+                    </li>
+                    <li class="menu-item">
+                      <div class="accr_header">
+                        <a href="#">SNS Counter</a>
+                      </div>
+                    </li>
+                    <li class="menu-item">
+                      <div class="accr_header">
+                        <a href="#">SNS Custom Box</a>
+                      </div>
+                    </li>
+                    <li class="menu-item">
+                      <div class="accr_header">
+                        <a href="#">SNS Featured Categories</a>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li class="menu-item">
+                <div class="accr_header">
+                  <a href="#">Shortcodes</a>
+                  <span class="btn_accor">
+                    <i class="fa-solid fa-plus-circle"></i>
+                  </span>
+                </div>
+                <div class="accr_content">
+                  <ul class="submenu">
+                    <li class="menu-item">
+                      <div class="accr_header">
+                        <a href="#">SNS Latest Posts</a>
+                      </div>
+                    </li>
+                    <li class="menu-item">
+                      <div class="accr_header">
+                        <a href="#">SNS Member</a>
+                      </div>
+                    </li>
+                    <li class="menu-item">
+                      <div class="accr_header">
+                        <a href="#">SNS Our Brand</a>
+                      </div>
+                    </li>
+                    <li class="menu-item">
+                      <div class="accr_header">
+                        <a href="#">SNS Product Tabs</a>
+                      </div>
+                    </li>
+                    <li class="menu-item">
+                      <div class="accr_header">
+                        <a href="#">SNS Products</a>
+                      </div>
+                    </li>
+                    <li class="menu-item">
+                      <div class="accr_header">
+                        <a href="#">SNS Testimonials</a>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </li>
+
+        <!-- NO SUBMENU -->
+        <li class="menu-item">
+          <div class="accr_header">
+            <a href="#">Contact us</a>
+          </div>
+        </li>
+      </ul>
+    </div>
+
     <!-- Content -->
     <main class="main">
       <div class="container">
@@ -270,8 +938,11 @@
 
         <!-- Latest, Best Seller, Featured -->
         <div class="padding-0-15">
-          <div class="content-box">
+          <div class="content-box products-section">
             <div class="product-choose grid-auto-1fr">
+              <div class="mobile-bar-icon">
+                <i class="fa-solid fa-bars"></i>
+              </div>
               <ul>
                 <li>
                   <a
@@ -297,10 +968,14 @@
                   </a>
                 </li>
               </ul>
-              <div class="line"></div>
+              <div class="line md"></div>
             </div>
+
             <!-- Fetch products from main-fetch.js for product-wrapper -->
-            <div id="product-wrapper" class="product-wrapper grid-col-5"></div>
+            <div
+              id="product-wrapper"
+              class="product-wrapper grid-col-5 grid-md-col-4"
+            ></div>
             <div style="text-align: center; margin: 20px 0">
               <button type="button" id="loadMoreBtn">Load More Items</button>
             </div>
@@ -342,6 +1017,10 @@
             <div class="grid-auto-1fr">
               <h2 class="suggest-collection__title">Suggest Collection</h2>
               <!-- <div class="line"></div> -->
+            </div>
+
+            <div class="mobile-bar-icon">
+              <i class="fa-solid fa-bars"></i>
             </div>
 
             <div class="collection-list">
@@ -619,34 +1298,34 @@
         <!-- Slider Brand -->
         <div class="padding-0-15">
           <div class="context-box brand-section">
-            <div class="brand-swiper">
-              <div class="brand-wrapper">
-                <div class="brand-item">
+            <div class="swiper brand-swiper">
+              <div class="swiper-wrapper">
+                <div class="brand-item swiper-slide">
                   <a href="#">
                     <img src="./assets/imgs/nova.png" alt="" />
                   </a>
                 </div>
-                <div class="brand-item">
+                <div class="brand-item swiper-slide">
                   <a href="#">
                     <img src="./assets/imgs/avio.png" alt="" />
                   </a>
                 </div>
-                <div class="brand-item">
+                <div class="brand-item swiper-slide">
                   <a href="#">
                     <img src="./assets/imgs/avan.png" alt="" />
                   </a>
                 </div>
-                <div class="brand-item">
+                <div class="brand-item swiper-slide">
                   <a href="#">
                     <img src="./assets/imgs/lamino.png" alt="" />
                   </a>
                 </div>
-                <div class="brand-item">
+                <div class="brand-item swiper-slide">
                   <a href="#">
                     <img src="./assets/imgs/nazic.png" alt="" />
                   </a>
                 </div>
-                <div class="brand-item">
+                <div class="brand-item swiper-slide">
                   <a href="#">
                     <img src="./assets/imgs/mbm.png" alt="" />
                   </a>
@@ -662,7 +1341,7 @@
     <footer class="footer">
       <div class="container">
         <div class="padding-0-15 first-footer">
-          <div class="footer-wrapper grid-col-5">
+          <div class="footer-wrapper grid-col-5 grid-md-col-2">
             <div class="footer-group">
               <h1 class="group-footer__title">Contact Us</h1>
               <div class="group-footer__list">

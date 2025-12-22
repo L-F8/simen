@@ -472,3 +472,50 @@ select {
         transform: none
     }
 }
+
+.mobile-bar-icon {
+    font-size: 26px;
+    font-weight: 700;
+    position: relative;
+    cursor: pointer;
+}
+
+.mobile-bar-icon {
+    display: none;
+}
+
+.quick-access {
+    display: none;
+    font-size: 12px;
+    color: var(--text-color-888);
+    border: 1px solid;
+    border-color: transparent #333;
+    padding: 7px 20px;
+    cursor: pointer;
+    position: relative;
+}
+
+.quick-access--dropdown {
+    right: 0;
+    top: calc(100% + 1px) !important;
+}
+
+.quick-access--dropdown ul li {
+    display: block;
+    border: 1px solid #eaeaea;
+}
+
+.quick-access--dropdown ul li a {
+    display: block;
+    font-size: 12px;
+    padding: 0 12px;
+    color: var(--text-color-888);
+}
+
+.quick-access--dropdown ul li a:hover {
+    color: var(--text-hover-color);
+}
+
+.quick-access--dropdown ul li a:hover>i {
+    color: var(--text-color-888);
+}
