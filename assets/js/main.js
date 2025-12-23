@@ -1,5 +1,8 @@
-// Xu ly chung cho cac menu item khi hover vao cac menu item 
-// thi hien thi cac dropdown su dung chung transition 
+/** 
+ * Xu ly chung cho cac menu item khi hover vao cac menu item 
+ * thi hien thi cac dropdown su dung chung transition 
+ */
+// Language and Currency unit dropdown
 const selectGroups = document.querySelectorAll('.select-group')
 selectGroups.forEach((select) => {
     const dropdown = select.querySelector('.transition-default')
@@ -16,6 +19,7 @@ selectGroups.forEach((select) => {
 })
 
 
+// Items Cart
 const menuBottomCart = document.querySelector('.menu-bottom__cart')
 const productsList = menuBottomCart.querySelector('.transition-default')
 menuBottomCart.addEventListener('mouseenter', () => {
@@ -26,6 +30,7 @@ menuBottomCart.addEventListener('mouseleave', () => {
 })
 
 
+// Quick access for menu-top__right dropdown on medium screen
 const quickAccess = document.querySelector('.quick-access')
 const quickAccessDropdown = quickAccess.querySelector('.transition-default')
 quickAccess.addEventListener('mouseenter', () => {
@@ -36,19 +41,25 @@ quickAccess.addEventListener('mouseleave', () => {
 })
 
 
+/**
+ * Xu ly cho overlay khi tai trang lan dau tien 
+ */
 // Xu ly khi load trang thi se hien overlay
 document.addEventListener('DOMContentLoaded', () => {
     document.querySelector('.overlay')?.classList.add('active')
 })
 
 // Dong overlay
-// document.querySelector('.overlay__btn-close').addEventListener('click', () => {
-//     document.querySelector('.overlay').classList.remove('active')
-// })
+document.querySelector('.overlay__btn-close').addEventListener('click', () => {
+    document.querySelector('.overlay').classList.remove('active')
+})
 
 
-// // Xu ly hien nut tro ve dau trang khi cuon trang
-// const returnBtn = document.querySelector('.return-btn')
+/**
+ * Xu ly display nut tro lai dau trang khi cuon trang xuong
+ */
+// Xu ly hien nut tro ve dau trang khi cuon trang
+const returnBtn = document.querySelector('.return-btn')
 
 // window.addEventListener("scroll", () => {
 //     const scrollTop = window.scrollY;
@@ -76,6 +87,9 @@ document.addEventListener('DOMContentLoaded', () => {
 // })
 
 
+/**
+ * Xu ly hover vao phan search o menu-bottom
+ */
 // Xu ly khi hover vao icon search thi hien input visible transition
 const wrapper = document.querySelector('.menu-bottom__wrapper')
 const iconSearch = wrapper.querySelector('.menu-bottom__search-icon')
@@ -108,7 +122,9 @@ iconSearch.addEventListener('mouseleave', (e) => {
 })
 
 
-
+/**
+ * Xu ly cho phan tac vu tren mobile, tablet
+ */
 // Process in sidebar menu on mobile, tablet
 const sidebar = document.querySelector('.menu-bottom__sidebar');
 const menuRoot = document.querySelector('.sidebar-menu');

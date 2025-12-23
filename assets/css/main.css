@@ -1502,80 +1502,6 @@
 }
 
 
-/* ------------------------ Overlay ------------------------- */
-.overlay {
-    position: fixed;
-    inset: 0;
-    background-color: #4e4e4e;
-    opacity: 0;
-    visibility: hidden;
-    z-index: 999;
-    transition:
-        opacity 1s ease,
-        visibility 1s ease;
-}
-
-.overlay.active {
-    opacity: 0.7;
-    visibility: visible;
-}
-
-.overlay-center {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 800px;
-    max-width: 800px;
-    background-color: var(--bg-color);
-    transform: translateX(-50%) translateY(-50%);
-}
-
-.overlay-form {
-    padding: 30px;
-    display: grid;
-}
-
-.overlay__btn-close {
-    font-size: 1.8rem;
-    font-weight: 600;
-    color: #fff;
-    width: 42px;
-    height: 42px;
-    background-color: #000000;
-    cursor: pointer;
-}
-
-.overlay__btn-close:hover {
-    background-color: #000000d8;
-}
-
-
-
-.overlay__input {
-    border: 1px solid #d6d6d6;
-    padding: 10px 10px;
-    width: 300px;
-    max-width: 300px;
-    line-height: 1.1rem;
-}
-
-.overlay__subcribe-btn {
-    font-size: 14px;
-    font-weight: bold;
-    text-align: center;
-    color: #666;
-    text-transform: uppercase;
-    background-color: #ccc;
-    padding: 10px 16px;
-}
-
-.overlay__subcribe-btn:hover {
-    background-color: var(--text-hover-color);
-    color: var(--bg-color);
-}
-
-
-
 /* ----------- Sidebar and overlay on medium screen --------- */
 .menu-bottom__sidebar,
 .menu-bottom__overlay {
@@ -1588,8 +1514,8 @@
 }
 
 .menu-bottom__overlay {
-    background: #000;
-    opacity: 0.2;
+    background: rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(1px);
 }
 
 .menu-bottom__sidebar {
@@ -1603,13 +1529,12 @@
 }
 
 .menu-bottom__sidebar.open {
-    opacity: 1;
-    visibility: visible;
     transform: translateX(0);
 }
 
+.menu-bottom__sidebar.open,
 .menu-bottom__overlay.open {
-    opacity: 0.2;
+    opacity: 1;
     visibility: visible;
 }
 
@@ -1679,4 +1604,103 @@
 
 .accr_content.open {
     opacity: 1;
+}
+
+
+
+/* ------------------------ Overlay ------------------------- */
+.overlay {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(78, 78, 78, 0.7);
+    opacity: 0;
+    visibility: hidden;
+    z-index: 999;
+    transition:
+        opacity 1s ease,
+        visibility 1s ease;
+}
+
+.overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.overlay-center {
+    border-radius: 4px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 800px;
+    background-color: var(--bg-color);
+    transform: translateX(-50%) translateY(-50%);
+    z-index: 1000;
+}
+
+.overlay-form {
+    padding: 30px;
+    gap: 20px;
+    padding-bottom: 50px;
+}
+
+.overlay__btn-close {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #fff;
+    width: 42px;
+    height: 42px;
+    background-color: #000000;
+    cursor: pointer;
+    border-top-right-radius: 4px;
+}
+
+.overlay__btn-close:hover {
+    background-color: #000000d8;
+}
+
+.overlay-title {
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 1.1;
+}
+
+.overlay-description {
+    line-height: 2;
+    margin: 10px 0;
+}
+
+.overlay-input-group {
+    display: flex;
+}
+
+.overlay__input {
+    border: 1px solid #d6d6d6;
+    padding: 10px 10px;
+    width: 300px;
+    max-width: 300px;
+    line-height: 1.1rem;
+}
+
+.overlay__subcribe-btn {
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    color: #666;
+    text-transform: uppercase;
+    background-color: #ccc;
+    padding: 10px 16px;
+    transition: all 0.3s linear 0s;
+}
+
+.overlay__subcribe-btn:hover {
+    background-color: var(--text-hover-color);
+    color: var(--bg-color);
+}
+
+.grid-right {
+    background: url('../imgs/5.png') no-repeat;
+    background-position: center;
+    background-size: contain;
+    min-height: 100%;
 }
